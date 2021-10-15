@@ -247,6 +247,14 @@ export class RedMageComponent implements OnInit {
       <br />若在持续时间中发动自动攻击或能力之外的技能，会立即解除连续咏唱状态`,
       changed: ``
     },
+    {
+      pic: 'https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_01.png',
+      name:'连续咏唱', lvl: 1, 
+      affect: `发动有咏唱时间的魔法时，对自身附加连续咏唱状态
+      <br />连续咏唱效果：下次咏唱魔法不需要咏唱时间
+      <br />若在持续时间中发动自动攻击或能力之外的技能，会立即解除连续咏唱状态`,
+      changed: ``
+    },
   ];
 
   constructor() { }
