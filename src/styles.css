@@ -1779,17 +1779,18 @@ td {
 }
 
 .roopBox3 .job_table .job_tbody .job_tlist .job_titem.item3_2 {
-    width: 580px;
+    width: 582px;
     -webkit-box-flex: 0;
     -webkit-flex: none;
     flex: none;
 }
 
 .roopBox3 .job_table .job_tbody .job_tlist .job_titem.item3_3 {
-    width: 350px;
+    width: 352px;
     -webkit-box-flex: 0;
     -webkit-flex: none;
     flex: none;
+    color: #b36b24;
 }
 
 .job__wrapper.blue .job__title {

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RedMageComponent } from './red-mage/red-mage.component';
-import { SummonnerComponent } from './summonner/summonner.component';
+import { SummonerComponent } from './summoner/summoner.component';
 import { BlackMageComponent } from './black-mage/black-mage.component';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
@@ -18,7 +18,7 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     RedMageComponent,
-    SummonnerComponent,
+    SummonerComponent,
     BlackMageComponent
   ],
   imports: [
