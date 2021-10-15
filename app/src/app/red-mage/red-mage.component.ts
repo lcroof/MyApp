@@ -212,7 +212,7 @@ export class RedMageComponent implements OnInit {
       affect: `对目标发动无属性魔法攻击　威力：300<br>发动条件：黑魔元与白魔元各5点<br><br>※该技能无法设置到热键栏`,
       changed: ``
     },
-  ];
+  ]; 
 
   roleSkills: any[] = [
     {
