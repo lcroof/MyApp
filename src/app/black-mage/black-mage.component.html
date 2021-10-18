@@ -61,10 +61,12 @@
                                             <div class="job_tlist">
                                                 <div class="job_titem item8_0">
                                                     <div class="skill_icon">
-                                                        <img src="{{item.pic}}" width="40" height="40" alt="" />
+                                                        <img src="{{item.pic}}" width="40" height="40" alt="" style="filter: grayscale(100%)" *ngIf="item.change=='删除技能'"/>
+                                                        <img src="{{item.pic}}" width="40" height="40" alt="" *ngIf="item.change!=='删除技能'"/>
                                                     </div>
-                                                    <p class="skill_txt"><strong>{{item.name}}</strong><strong class="des" *ngIf="item.ndes!==''">通过特职任务获得</strong>
-                                                    </p>
+                                                    <s *ngIf="item.change=='删除技能'"><strong><div class="skill_txt" [innerHTML]=[item.name]></div></strong></s>
+                                                    <strong *ngIf="item.change!=='删除技能'"><div class="skill_txt" [innerHTML]=[item.name]></div></strong>
+                                                    <!-- <p class="skill_txt"><strong>{{item.name}}</strong><strong class="des" *ngIf="item.ndes!==''">通过特职任务获得</strong> -->
                                                 </div>
                                                 <div class="job_titem item8_1">
                                                     <div class="waper_icon">

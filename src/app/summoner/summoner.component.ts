@@ -42,7 +42,7 @@ export class SummonerComponent implements OnInit {
        distant: "25", 
        range:0, 
        content: "对目标附加无属性持续伤害状态<BR>威力：20　持续时间：30秒", 
-       change: "持续伤害效果的威力从40变更为20。<br />效果时间从18秒变更为30秒。"
+       change: "<s style=\"color:gray\">毒菌</s>持续伤害效果的威力从40变更为20。<br />效果时间从18秒变更为30秒。"
     }, 
     {
        name: "医术", 
