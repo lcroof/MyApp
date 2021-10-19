@@ -227,7 +227,7 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: "25",
       range: 0,
-      content: "对目标发动物理攻击　威力：4440",
+      content: "对目标发动物理攻击　威力：440",
       change: "威力从420变更为440"
     },
     {
