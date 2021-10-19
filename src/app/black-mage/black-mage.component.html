@@ -14,8 +14,8 @@
             </div>
             <div class="job__wrapper red">
                 <div class="job__content">
-                    <p class="job__update">最近更新: 2021/04/06</p>
-                    <p class="job__notes__lv80caution">各个技能和特性的内容，是以Lv80时显示的相应内容为主的。<br />由于版本还在不断修正改善中，具体内容以实际更新后版本为准。
+                    <p class="job__update">最近更新: 2021/10/19</p>
+                    <p class="job__notes__lv80caution">本职业指南是Erlade以MediaTour披露的内容抢鲜制作的。感谢伊芙嘉登的网页框架修改。<br />由于版本还在不断修正改善中，具体内容以实际更新后版本为准。
                     </p>
                     <div class="job__content__wrapper">
                         <h2 class="job__title">技能 &middot; 特性</h2>
@@ -245,9 +245,13 @@
                                             <div class="job_tlist">
                                                 <div class="job_titem item3_0">
                                                     <div class="skill_icon">
-                                                        <img src="{{item.pic}}" width="40" height="40" alt="" />
+                                                        <img src="{{item.pic}}" width="40" height="40" alt="" style="filter: grayscale(100%)" *ngIf="item.change=='删除特性'"/>
+                                                        <img src="{{item.pic}}" width="40" height="40" alt="" *ngIf="item.change!=='删除特性'"/>
+                                                        <!-- <img src="{{item.pic}}" width="40" height="40" alt="" /> -->
                                                     </div>
-                                                    <p class="skill_txt"><strong>{{item.name}}</strong> </p>
+                                                    <s *ngIf="item.change=='删除特性'"><strong><div class="skill_txt" [innerHTML]=[item.name]></div></strong></s>
+                                                    <strong *ngIf="item.change!=='删除特性'"><div class="skill_txt" [innerHTML]=[item.name]></div></strong>
+                                                    <!-- <p class="skill_txt"><strong>{{item.name}}</strong> </p> -->
                                                 </div>
                                                 <div class="job_titem item3_1">
                                                     <div class="waper_icon">
