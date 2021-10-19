@@ -25,7 +25,7 @@ export class BlackMageComponent implements OnInit {
         distant: "25", 
         range: 0, 
         content: "对目标发动冰属性魔法攻击　威力：180<BR>追加效果：灵极冰　持续时间：15秒<BR>在处于星极火状态时只会解除该状态<BR>持续时间：15秒", 
-        change: ""
+        change: "效果时间从13秒变更为15秒。"
     }, 
     {
         name: "火炎", 
@@ -41,8 +41,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力800", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动火属性魔法攻击　威力：180<BR>追加效果：星极火　持续时间：15秒<BR>在处于灵极冰状态时只会解除该状态<BR>持续时间：15秒<BR>追加效果（发动几率40%）：下次发动爆炎不消耗魔力，同时也没有咏唱时间　持续时间：30秒", 
-        change: "追加效果持续时间从18秒变更为30秒"
+        content: "对目标发动火属性魔法攻击　威力：180<BR>追加效果：星极火　持续时间：15秒<BR>在处于灵极冰状态时只会解除该状态<BR>持续时间：15秒<BR>追加效果（发动几率40%）：下次发动爆炎不消耗魔力，同时也没有咏唱时间　持续时间：18秒", 
+        change: "效果时间从13秒变更为15秒。"
     }, 
     {
         name: "星灵移位", 
@@ -59,7 +59,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "自身处于星极火或灵极冰的状态时迅速切换到另一状态的初级阶段", 
-        change: ""
+        change: "复唱时间从8秒变更为5秒。"
     }, 
     {
         name: "闪雷", 
@@ -75,8 +75,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力200", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动雷属性魔法攻击　威力：30<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "追加效果持续时间从18秒变更为21秒"
+        content: "对目标发动雷属性魔法攻击　威力：30<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：18秒", 
+        change: ""
     }, 
     {
         name: "催眠", 
@@ -93,24 +93,24 @@ export class BlackMageComponent implements OnInit {
         distant: "30", 
         range: "5", 
         content: "令目标及其周围的敌人陷入睡眠状态　持续时间：30秒<BR>发动之后会停止自动攻击", 
-        change: "删除技能"
+        change: ""
     }, 
     {
         name: "冰冻", 
         ndes: "", 
-        pic: "../../assets/BLM/冰2.png", 
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_06.png", 
         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
         tname: "咒术师", 
         ticon: "", 
         lvl: "Lv12", 
         classification: "魔法", 
-        cast: "3秒", 
+        cast: "2秒", 
         recast: "2.5秒", 
         cost: "魔力800", 
-        distant: 25, 
+        distant: 0, 
         range: "5", 
-        content: "对目标及其周围的敌人发动冰属性范围魔法攻击　威力：90<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态<BR>持续时间：15秒", 
-        change: "完全重做"
+        content: "对周围的敌人发动冰属性范围魔法攻击　威力：50<BR>追加效果：灵极冰　持续时间：15秒<BR>在处于星极火状态时只会解除该状态<BR>持续时间：15秒", 
+        change: "删除“追加效果：止步　效果时间：8秒”。<br>效果时间从13秒变更为15秒。"
     }, 
     {
         name: "崩溃", 
@@ -143,8 +143,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力1500", 
         distant: "25", 
         range: "5", 
-        content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：90<BR>追加效果：星极火最大档数　持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态<BR>持续时间：15秒", 
-        change: "威力从80变更为90<BR>追加效果从「星极火　持续时间：15秒  在处于灵极冰状态时只会解除该状态  持续时间：15秒」变更为：「星极火最大档数　持续时间：15秒  在处于灵极冰状态时会同时解除该状态」"
+        content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：80<BR>追加效果：星极火　持续时间：15秒<BR>在处于灵极冰状态时只会解除该状态<BR>持续时间：15秒", 
+        change: "效果时间从13秒变更为15秒。"
     }, 
     {
         name: "震雷", 
@@ -155,13 +155,13 @@ export class BlackMageComponent implements OnInit {
         ticon: "", 
         lvl: "Lv26", 
         classification: "魔法", 
-        cast: "2.5秒", 
+        cast: "3秒", 
         recast: "2.5秒", 
         cost: "魔力400", 
         distant: "25", 
         range: "5", 
         content: "对目标发动雷属性魔法攻击　威力：50<BR>追加效果：雷击　持续时间：21秒<BR>雷击效果：雷属性持续伤害　威力：40　<BR>追加效果（雷击效果中，发动几率10%）：下次发动的闪雷、震雷、暴雷的咏唱时间与消耗魔力均为0，并且威力变为330<BR>持续时间：12秒", 
-        change: "咏唱时间从3秒变更为2.5秒<BR>雷击的持续时间从12秒变更为18秒<BR>追加效果持续时间从18秒变更为21秒"
+        change: ""
     }, 
     {
         name: "魔罩", 
@@ -190,12 +190,12 @@ export class BlackMageComponent implements OnInit {
         lvl: "Lv30", 
         classification: "能力", 
         cast: "即时", 
-        recast: "120秒", 
+        recast: "180秒", 
         cost: "-", 
         distant: 0, 
         range: 0, 
         content: "恢复最大魔力的30%", 
-        change: "复唱时间从180秒变更为120秒"
+        change: "技能名称变更。<br>效果更新。"
     }, 
     {
         name: "爆炎", 
@@ -204,7 +204,7 @@ export class BlackMageComponent implements OnInit {
         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
         tname: "咒术师", 
         ticon: "", 
-        lvl: "Lv35", 
+        lvl: "Lv34", 
         classification: "魔法", 
         cast: "3.5秒", 
         recast: "2.5秒", 
@@ -212,24 +212,7 @@ export class BlackMageComponent implements OnInit {
         distant: "25", 
         range: 0, 
         content: "对目标发动火属性魔法攻击　威力：240<BR>追加效果：星极火最大档数　持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态", 
-        change: "习得条件从34变更为35"
-    }, 
-    {
-        name: "冰封", 
-        ndes: "通过特职任务获得", 
-        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_14.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv35", 
-        classification: "魔法", 
-        cast: "3.5秒", 
-        recast: "2.5秒", 
-        cost: "魔力800", 
-        distant: "25", 
-        range: 0, 
-        content: "对目标发动冰属性魔法攻击　威力：240<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态", 
-        change: "习得条件从40变更为35"
+        change: "效果时间从13秒变更为15秒。"
     }, 
     {
         name: "玄冰", 
@@ -238,15 +221,32 @@ export class BlackMageComponent implements OnInit {
         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
         tname: "黑魔法师", 
         ticon: "", 
-        lvl: "Lv40", 
+        lvl: "Lv35", 
         classification: "魔法", 
-        cast: "2.8秒", 
+        cast: "2.5秒", 
         recast: "2.5秒", 
         cost: "魔力1000", 
         distant: "25", 
         range: "5", 
-        content: "对目标及其周围的敌人发动冰属性范围魔法攻击　威力：120<BR>追加效果：3档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：灵极冰状态中", 
-        change: "习得条件从35变更为40<BR>咏唱时间从2.5秒变更为2.8秒<BR>威力从100变更为120<BR>删除追加效果「灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态」<BR>追加效果从「1档灵极心」变更为「3档灵极心」<BR>新增发动条件：灵极冰状态中"
+        content: "对目标及其周围的敌人发动冰属性范围魔法攻击　威力：100<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态<BR>追加效果：1档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3", 
+        change: "效果更新。<br>咏唱时间从3秒变更为2.5秒。"
+    }, 
+    {
+        name: "冰封", 
+        ndes: "通过特职任务获得", 
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_14.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv40", 
+        classification: "魔法", 
+        cast: "3.5秒", 
+        recast: "2.5秒", 
+        cost: "魔力800", 
+        distant: "25", 
+        range: 0, 
+        content: "对目标发动冰属性魔法攻击　威力：240<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态", 
+        change: "效果时间从13秒变更为15秒。"
     }, 
     {
         name: "暴雷", 
@@ -262,8 +262,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力400", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动雷属性魔法攻击　威力：70<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：24秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "追加效果的持续时间从18秒变更为21秒"
+        content: "对目标发动雷属性魔法攻击　威力：70<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：24秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：18秒", 
+        change: ""
     }, 
     {
         name: "以太步", 
@@ -296,8 +296,8 @@ export class BlackMageComponent implements OnInit {
         cost: "全部魔力", 
         distant: "25", 
         range: "5", 
-        content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：220<BR>攻击复数敌人时，对目标之外的敌人威力降低40%<BR>核爆效果提高时威力：260<BR>追加效果：星极火最大档数　持续时间：15秒", 
-        change: "威力从260变更为220<BR> 新增核爆效果提高时威力：260<BR>删除「在处于灵极冰状态时会同时解除该状态」的效果<br>"
+        content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：260<BR>攻击复数敌人时，对目标之外的敌人威力降低40%<BR>追加效果：星极火最大档数　持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态", 
+        change: "从“攻击复数目标时，每多1目标，对该目标威力降低15%，最低降为30%”变更为“攻击复数敌人时，对目标之外的敌人威力降低40%”。<br>效果时间从13秒变更为15秒。<br>"
     }, 
     {
         name: "黑魔纹", 
@@ -330,8 +330,8 @@ export class BlackMageComponent implements OnInit {
         cost: "-", 
         distant: 0, 
         range: 0, 
-        content: "效果时间内，自身发动的1次“崩溃”或“火炎”或“雷系魔法”必定触发“崩溃的追加效果”“火苗”“雷云”<BR>持续时间：15秒<BR>新增积蓄次数：2", 
-        change: "新增积蓄次数：2"
+        content: "效果时间内，自身发动的1次“崩溃”或“火炎”或“雷系魔法”必定触发“崩溃的追加效果”“火苗”“雷云”<BR>持续时间：15秒", 
+        change: "复唱时间从60秒变更为30秒。"
     }, 
     {
         name: "天语", 
@@ -348,7 +348,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "一定时间内，自身发动魔法攻击造成的伤害提高15%<BR>同时可以咏唱冰澈、炽炎、绝望、灵极魂<BR>星极火及灵极冰状态全部消失时天语状态也会同时消失<BR>追加效果：天语状态持续30秒可对自身附加通晓状态<BR>最大档数：2档　持续时间：永久<BR>发动条件：星极火或灵极冰状态中", 
-        change: "删除技能"
+        change: "效果量从10%变更为15%。<br>从“可以咏唱冰澈与炽炎”变更为“可以咏唱冰澈、炽炎、绝望、灵极魂”。<br>新增“最大档数：2档　效果时间：永久”。"
     }, 
     {
         name: "冰澈", 
@@ -364,8 +364,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力800", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动冰属性魔法攻击　威力：300<BR>追加效果：3档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：灵极冰状态中", 
-        change: "发动条件从「天语及灵极冰状态中」变更为「灵极冰状态中」"
+        content: "对目标发动冰属性魔法攻击　威力：300<BR>追加效果：3档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：天语及灵极冰状态中", 
+        change: "威力从260变更为300。"
     }, 
     {
         name: "炽炎", 
@@ -381,8 +381,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力800", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动火属性魔法攻击　威力：300<BR>发动条件：星极火状态中", 
-        change: "发动条件从「天语及星极火状态中」变更为「星极火状态中」"
+        content: "对目标发动火属性魔法攻击　威力：300<BR>发动条件：天语及星极火状态中", 
+        change: ""
     }, 
     {
         name: "魔纹步", 
@@ -410,13 +410,13 @@ export class BlackMageComponent implements OnInit {
         ticon: "", 
         lvl: "Lv64", 
         classification: "魔法", 
-        cast: "2.5秒", 
+        cast: "3秒", 
         recast: "2.5秒", 
         cost: "魔力800", 
         distant: "25", 
         range: "5", 
-        content: "对目标及其周围敌人发动雷属性范围魔法攻击　威力：50<BR>追加效果：雷属性持续伤害<BR>威力：30　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率3%）：下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "咏唱时间从3秒变更为2.5秒<BR>追加效果持续时间从18秒变更为21秒"
+        content: "对目标及其周围敌人发动雷属性范围魔法攻击　威力：50<BR>追加效果：雷属性持续伤害<BR>威力：30　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率3%）：下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：18秒", 
+        change: ""
     }, 
     {
         name: "三连咏唱", 
@@ -433,7 +433,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "效果时间内，前3次咏唱的魔法没有任何咏唱时间　持续时间：15秒", 
-        change: ""
+        change: "状态栏中的效果图标将显示剩余次数"
     }, 
     {
         name: "秽浊", 
@@ -444,13 +444,13 @@ export class BlackMageComponent implements OnInit {
         ticon: "", 
         lvl: "Lv70", 
         classification: "魔法", 
-        cast: "即时", 
+        cast: "2.5秒", 
         recast: "2.5秒", 
         cost: "「通晓」1", 
         distant: "25", 
         range: "5", 
-        content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：600<BR>攻击复数敌人时，对目标之外的敌人威力降低50%<BR>发动条件：通晓", 
-        change: "咏唱时间从2.5秒变更为即时<BR>威力从650变更为600<BR>攻击复数敌人时，对目标之外的敌人威力降低从25%变更为50%"
+        content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：650<BR>攻击复数敌人时，对目标之外的敌人威力降低25%<BR>发动条件：通晓", 
+        change: "	攻击复数目标时，对目标之外的敌人威力从「每多1目标，对该目标威力降低10%，最低降为50%」变更为「降低25％」。"
     }, 
     {
         name: "绝望", 
@@ -466,8 +466,8 @@ export class BlackMageComponent implements OnInit {
         cost: "全部魔力", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动火属性魔法攻击　威力：380<BR>追加效果：星极火最大档数　持续时间：15秒<BR>发动条件：星极火状态中", 
-        change: "发动条件从「天语及星极火状态中」变更为「星极火状态中」"
+        content: "对目标发动火属性魔法攻击　威力：380<BR>追加效果：星极火最大档数　持续时间：15秒<BR>发动条件：天语及星极火状态中", 
+        change: ""
     }, 
     {
         name: "灵极魂", 
@@ -483,8 +483,8 @@ export class BlackMageComponent implements OnInit {
         cost: "-", 
         distant: 0, 
         range: 0, 
-        content: "对自身附加灵极冰状态及1档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：灵极冰状态中", 
-        change: "发动条件从「天语及灵极冰状态中」变更为「灵极冰状态中」"
+        content: "对自身附加灵极冰状态及1档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：天语及灵极冰状态中", 
+        change: ""
     }, 
     {
         name: "异言", 
@@ -500,76 +500,8 @@ export class BlackMageComponent implements OnInit {
         cost: "「通晓」1", 
         distant: "25", 
         range: 0, 
-        content: "对目标发动无属性魔法攻击　威力：700<BR>发动条件：通晓", 
-        change: "威力从750变更为700"
-    }, 
-    {
-        name: "High Blizzard II<br>强冰冻", 
-        ndes: "", 
-        pic: "../../assets/BLM/强冰2.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv82", 
-        classification: "魔法", 
-        cast: "3秒", 
-        recast: "2.5秒", 
-        cost: "800", 
-        distant: 25, 
-        range: 5, 
-        content: "对目标及其周围的敌人发动冰属性范围魔法攻击<BR>威力：100<BR>追加效果：灵极冰最大档数<BR>持续时间：15秒<BR>在处于星极火状态时会同时解除该状态", 
-        change: "新增技能"
-    }, 
-    {
-        name: "High Fire II<BR>强烈炎", 
-        ndes: "", 
-        pic: "../../assets/BLM/强火2.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv82", 
-        classification: "魔法", 
-        cast: "3秒", 
-        recast: "2.5秒", 
-        cost: "1500", 
-        distant: 25, 
-        range: 5, 
-        content: "对目标及其周围的敌人发动火属性范围魔法攻击<BR>威力：100<BR>追加效果：星极火最大档数<BR>持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态<BR>星极火效果：核爆效果提高<BR>持续时间：30秒<BR>最大档数：2", 
-        change: "新增技能"
-    }, 
-    {
-        name: "Amplifier<BR>扩音", 
-        ndes: "", 
-        pic: "../../assets/BLM/扩音.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv86", 
-        classification: "能力", 
-        cast: "即时", 
-        recast: "120秒", 
-        cost: "-", 
-        distant: 0, 
-        range: 0, 
-        content: "对自身附加通晓状态<BR>发动条件：星极火或灵极冰状态中", 
-        change: "新增技能"
-    }, 
-    {
-        name: "Paradox<BR>悖论", 
-        ndes: "", 
-        pic: "../../assets/BLM/悖论.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv90", 
-        classification: "魔法", 
-        cast: "即时", 
-        recast: "2.5秒", 
-        cost: "-", 
-        distant: 0, 
-        range: 0, 
-        content: "对目标发动无属性魔法攻击 威力：510<BR>星极火效果：重置星极火的持续时间<BR>追加效果（发动几率40%）：下次发动爆炎不消耗魔力，同时也没有咏唱时间 持续时间：30秒<BR>灵极冰效果：不消耗魔力，同时重置灵极冰的持续时间<BR>发动条件：悖论标记<BR>*该技能无法设置到热键栏", 
-        change: "新增技能"
+        content: "对目标发动无属性魔法攻击　威力：750<BR>发动条件：通晓", 
+        change: ""
     }
 ];
 
@@ -594,30 +526,8 @@ export class BlackMageComponent implements OnInit {
         cost: "-", 
         distant: "25", 
         range: 0, 
-        content: "一定时间内，令目标的物理伤害降低5%，魔法伤害降低10% <BR>持续时间：10秒", 
-        change: "效果从「令目标的智力与精神降低10% 」变更为「令目标的物理伤害降低5%，魔法伤害降低10% 」"
-    }, 
-    {
-        name: "催眠", 
-        ndes: "", 
-        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_05.png", 
-        tiurl: "", 
-        tname: "", 
-        ticon: [
-            {
-                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png", 
-                tname: "远程魔法职业"
-            }
-        ], 
-        lvl: "Lv10", 
-        classification: "魔法", 
-        cast: "2.5秒", 
-        recast: "2.5秒", 
-        cost: "800", 
-        distant: 30, 
-        range: 5, 
-        content: "令目标及其周围的敌人陷入睡眠状态<BR>持续时间：30秒<BR>发动之后会停止自动攻击", 
-        change: "新增特性"
+        content: "一定时间内，令目标的智力与精神降低10%<BR>持续时间：10秒", 
+        change: ""
     }, 
     {
         name: "即刻咏唱", 
@@ -643,7 +553,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "一定时间内，下次咏唱的魔法没有任何咏唱时间<BR>持续时间：10秒", 
-        change: ""
+        change: "习得等级从32变更为18。"
     }, 
     {
         name: "醒梦", 
@@ -669,7 +579,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "持续恢复自身魔力<BR>效果量：50　持续时间：21秒", 
-        change: ""
+        change: "删除“将自身的仇恨减半”。<br>复唱时间从120秒变更为60秒。<br>效果量从80变更为50。"
     }, 
     {
         name: "沉稳咏唱", 
@@ -695,7 +605,7 @@ export class BlackMageComponent implements OnInit {
         distant: 0, 
         range: 0, 
         content: "一定时间内，咏唱的魔法不会被任何妨碍打断<BR>同时，令除特定攻击之外其他所有击退与吸引效果失效<BR>持续时间：6秒", 
-        change: ""
+        change: "复唱时间从30秒变更为120秒。<br>效果时间从5秒变更为6秒。"
     }
 ];
 
