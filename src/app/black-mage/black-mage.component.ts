@@ -76,7 +76,7 @@ export class BlackMageComponent implements OnInit {
         distant: "25", 
         range: 0, 
         content: "对目标发动雷属性魔法攻击　威力：30<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "追加效果持续时间从18秒变更为21秒"
+        change: "雷击追加效果的持续时间从18秒变更为21秒"
     }, 
     {
         name: "催眠", 
@@ -160,8 +160,8 @@ export class BlackMageComponent implements OnInit {
         cost: "魔力400", 
         distant: "25", 
         range: "5", 
-        content: "对目标发动雷属性魔法攻击　威力：50<BR>追加效果：雷击　持续时间：21秒<BR>雷击效果：雷属性持续伤害　威力：40　<BR>追加效果（雷击效果中，发动几率10%）：下次发动的闪雷、震雷、暴雷的咏唱时间与消耗魔力均为0，并且威力变为330<BR>持续时间：12秒", 
-        change: "咏唱时间从3秒变更为2.5秒<BR>雷击的持续时间从12秒变更为18秒<BR>追加效果持续时间从18秒变更为21秒"
+        content: "对目标发动雷属性魔法攻击　威力：50<BR>追加效果：雷击　持续时间：21秒<BR>雷击效果：雷属性持续伤害　威力：25　<BR>追加效果（持续伤害每次起效时，发动几率3%）：下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：18秒", 
+        change: "咏唱时间从3秒变更为2.5秒<BR>雷击的威力从30变更为25<BR>雷击的持续时间从12秒变更为18秒<BR>雷击追加效果的持续时间从18秒变更为21秒"
     }, 
     {
         name: "魔罩", 
@@ -263,7 +263,7 @@ export class BlackMageComponent implements OnInit {
         distant: "25", 
         range: 0, 
         content: "对目标发动雷属性魔法攻击　威力：70<BR>追加效果：雷属性持续伤害<BR>威力：40　持续时间：24秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率10%）：<BR>下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "追加效果的持续时间从18秒变更为21秒"
+        change: "雷击追加效果的的持续时间从18秒变更为21秒"
     }, 
     {
         name: "以太步", 
@@ -412,11 +412,11 @@ export class BlackMageComponent implements OnInit {
         classification: "魔法", 
         cast: "2.5秒", 
         recast: "2.5秒", 
-        cost: "魔力800", 
+        cost: "魔力400", 
         distant: "25", 
         range: "5", 
         content: "对目标及其周围敌人发动雷属性范围魔法攻击　威力：50<BR>追加效果：雷属性持续伤害<BR>威力：30　持续时间：18秒<BR>自身对目标附加的雷系魔法持续伤害效果同时只能存在一种<BR>追加效果（持续伤害每次起效时，发动几率3%）：下次发动的雷系魔法咏唱时间与消耗魔力均为0<BR>且命中时的威力会加算持续伤害的总和<BR>持续时间：21秒", 
-        change: "咏唱时间从3秒变更为2.5秒<BR>追加效果持续时间从18秒变更为21秒"
+        change: "咏唱时间从3秒变更为2.5秒<BR>消费从「魔力800」变更为「魔力400」<BR>雷击追加效果的持续时间从18秒变更为21秒"
     }, 
     {
         name: "三连咏唱", 
@@ -514,7 +514,7 @@ export class BlackMageComponent implements OnInit {
         classification: "魔法", 
         cast: "3秒", 
         recast: "2.5秒", 
-        cost: "800", 
+        cost: "魔力800", 
         distant: 25, 
         range: 5, 
         content: "对目标及其周围的敌人发动冰属性范围魔法攻击<BR>威力：100<BR>追加效果：灵极冰最大档数<BR>持续时间：15秒<BR>在处于星极火状态时会同时解除该状态", 
@@ -531,10 +531,10 @@ export class BlackMageComponent implements OnInit {
         classification: "魔法", 
         cast: "3秒", 
         recast: "2.5秒", 
-        cost: "1500", 
+        cost: "魔力1500", 
         distant: 25, 
         range: 5, 
-        content: "对目标及其周围的敌人发动火属性范围魔法攻击<BR>威力：100<BR>追加效果：星极火最大档数<BR>持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态<BR>星极火效果：核爆效果提高<BR>持续时间：30秒<BR>最大档数：2", 
+        content: "对目标及其周围的敌人发动火属性范围魔法攻击<BR>威力：100<BR>追加效果：星极火最大档数<BR>持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态<BR>星极火状态时追加效果：核爆效果提高<BR>持续时间：30秒<BR>最大档数：2", 
         change: "新增技能"
     }, 
     {
@@ -563,12 +563,12 @@ export class BlackMageComponent implements OnInit {
         ticon: "", 
         lvl: "Lv90", 
         classification: "魔法", 
-        cast: "即时", 
+        cast: "2.5秒", 
         recast: "2.5秒", 
-        cost: "-", 
+        cost: "魔力1600", 
         distant: 0, 
         range: 0, 
-        content: "对目标发动无属性魔法攻击 威力：510<BR>星极火效果：重置星极火的持续时间<BR>追加效果（发动几率40%）：下次发动爆炎不消耗魔力，同时也没有咏唱时间 持续时间：30秒<BR>灵极冰效果：不消耗魔力，同时重置灵极冰的持续时间<BR>发动条件：悖论标记<BR>*该技能无法设置到热键栏", 
+        content: "对目标发动无属性魔法攻击 威力：510<BR>星极火状态时追加效果：星极火 持续时间：15秒<BR>追加效果（发动几率40%）：下次发动爆炎不消耗魔力，同时也没有咏唱时间 持续时间：30秒<BR>灵极冰状态时追加效果：灵极冰 持续时间：15秒<BR>同时不消耗魔力<BR>发动条件：悖论标记<BR>*该技能无法设置到热键栏", 
         change: "新增技能"
     }
 ];
@@ -702,6 +702,28 @@ export class BlackMageComponent implements OnInit {
 
   traits: any[] = [
     {
+        name: "极性精通", 
+        ndes: "", 
+        pic: "../../assets/BLM/极性精通.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
+        tname: "咒术师", 
+        ticon: "", 
+        lvl: "Lv1", 
+        content: "咏唱部分火属性和冰属性魔法时对自身附加星极火和灵极冰效果<BR>最大档数：1   持续时间：15秒<BR>当自身在星极火或灵极冰状态时，相反属性的魔法将不消耗魔力<BR>但不适用于核爆", 
+        change: "习得条件从Lv72变更为Lv1<BR>新增效果「咏唱部分火属性和冰属性魔法时对自身附加星极火和灵极冰效果      最大档数：1   持续时间：15秒」"
+    },
+    {
+        name: "极性精通II", 
+        ndes: "", 
+        pic: "../../assets/BLM/极性精通2.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
+        tname: "咒术师", 
+        ticon: "", 
+        lvl: "Lv20", 
+        content: "星极火和灵极冰可以积累到2档", 
+        change: "新增特性"
+    },
+    {
         name: "技能效果提高", 
         ndes: "", 
         pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_01.png", 
@@ -720,9 +742,20 @@ export class BlackMageComponent implements OnInit {
         tname: "咒术师", 
         ticon: "", 
         lvl: "Lv28", 
-        content: "下次咏唱的闪雷、震雷、暴雷、霹雷在命中时额外追加持续伤害总量的伤害，并且咏唱时间与消耗魔力均为0<BR>持续时间：18秒<BR>发动条件：闪雷、暴雷的持续伤害起效时（发动几率10%）或震雷、霹雷的持续伤害起效时（发动几率3%）", 
-        change: ""
-    }, 
+        content: "下次咏唱的闪雷、震雷、暴雷、霹雷在命中时额外追加持续伤害总量的伤害，并且咏唱时间与消耗魔力均为0<BR>持续时间：21秒<BR>发动条件：闪雷、暴雷的持续伤害起效时（发动几率10%）或震雷、霹雷的持续伤害起效时（发动几率3%）", 
+        change: "持续时间从18秒变更为21秒"
+    },
+    {
+        name: "极性精通III", 
+        ndes: "", 
+        pic: "../../assets/BLM/极性精通3.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
+        tname: "咒术师", 
+        ticon: "", 
+        lvl: "Lv35", 
+        content: "星极火和灵极冰可以积累到3档<br>咏唱烈炎或冰冻时可附加到星极火或灵极冰的最大档数", 
+        change: "新增特性"
+    },
     {
         name: "技能效果提高II", 
         ndes: "", 
@@ -742,8 +775,8 @@ export class BlackMageComponent implements OnInit {
         tname: "咒术师", 
         ticon: "", 
         lvl: "Lv42", 
-        content: "下次咏唱爆炎时不需要咏唱时间也不会消耗魔力<BR>持续时间：18秒<BR>发动条件：火炎（发动几率40%）", 
-        change: ""
+        content: "下次咏唱爆炎时不需要咏唱时间也不会消耗魔力<BR>持续时间：30秒<BR>发动条件：火炎（发动几率40%）", 
+        change: "持续时间从18秒变更为30秒"
     }, 
     {
         name: "闪雷精通", 
@@ -755,6 +788,17 @@ export class BlackMageComponent implements OnInit {
         lvl: "Lv45", 
         content: "闪雷变为暴雷", 
         change: ""
+    },
+    {
+        name: "天语", 
+        ndes: "", 
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_20.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/Zlo0xBHOBte3IGPo8SY9XUcGes.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv56", 
+        content: "星极火或灵极冰状态中，自身发动魔法攻击造成的伤害提高5% ", 
+        change: "新增特性"
     }, 
     {
         name: "闪雷精通II", 
@@ -768,6 +812,17 @@ export class BlackMageComponent implements OnInit {
         change: ""
     }, 
     {
+        name: "玄冰效果提高", 
+        ndes: "", 
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_08.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv58", 
+        content: "对自身附加3档灵极心状态<BR>发动条件：玄冰", 
+        change: "习得条件从68级变更为58级<BR>效果从「对自身附加1档灵极心状态」变更为「对自身附加3档灵极心状态」"
+    }, 
+    {
         name: "灵极心效果提高", 
         ndes: "", 
         pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_07.png", 
@@ -776,18 +831,7 @@ export class BlackMageComponent implements OnInit {
         ticon: "", 
         lvl: "Lv68", 
         content: "核爆的消耗魔力减为2/3<BR>发动时消耗全部灵极心<BR>发动条件：灵极心状态下", 
-        change: ""
-    }, 
-    {
-        name: "玄冰效果提高", 
-        ndes: "", 
-        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_08.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv68", 
-        content: "对自身附加1档灵极心状态<BR>发动条件：玄冰", 
-        change: ""
+        change: "删除特性"
     }, 
     {
         name: "天语效果提高", 
@@ -799,18 +843,7 @@ export class BlackMageComponent implements OnInit {
         lvl: "Lv70", 
         content: "对自身附加通晓状态<BR>发动条件：令天语状态持续30秒<BR>另外，天语的效果量提高到10%", 
         change: ""
-    }, 
-    {
-        name: "极性精通", 
-        ndes: "", 
-        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_10.png", 
-        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
-        tname: "黑魔法师", 
-        ticon: "", 
-        lvl: "Lv72", 
-        content: "当自身的星极火或灵极冰达到最高档数时，相反属性的魔法将不消耗魔力<br>但不适用于核爆", 
-        change: ""
-    }, 
+    },  
     {
         name: "激情咏唱效果提高", 
         ndes: "", 
@@ -834,6 +867,17 @@ export class BlackMageComponent implements OnInit {
         change: ""
     }, 
     {
+        name: "秽浊效果提高", 
+        ndes: "", 
+        pic: "../../assets/BLM/秽浊效果提高.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv80", 
+        content: "咏唱秽浊时不需要咏唱时间", 
+        change: "新增特性"
+    }, 
+    {
         name: "通晓效果提高", 
         ndes: "", 
         pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_13.png", 
@@ -843,6 +887,61 @@ export class BlackMageComponent implements OnInit {
         lvl: "Lv80", 
         content: "通晓可以积累到2档", 
         change: ""
+    }, 
+    {
+        name: "极性精通IV", 
+        ndes: "", 
+        pic: "../../assets/BLM/极性精通4.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv82", 
+        content: "烈炎和冰冻变为强烈炎和强冰冻", 
+        change: "新增特性"
+    }, 
+    {
+        name: "魔泉效果提高", 
+        ndes: "", 
+        pic: "../../assets/BLM/魔泉效果提高.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv84", 
+        content: "魔泉的复唱时间缩短到120秒", 
+        change: "新增特性"
+    }, 
+    {
+        name: "天语效果提高III", 
+        ndes: "", 
+        pic: "../../assets/BLM/天语效果提高3.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv86", 
+        content: "天语的效果量提高到20%", 
+        change: "新增特性"
+    }, 
+    {
+        name: "激情咏唱效果提高II", 
+        ndes: "", 
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Trait_11.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv88", 
+        content: "激情咏唱变为积蓄技能<BR>积蓄次数：2", 
+        change: "新增特性（官方没给新图标）"
+    }, 
+    {
+        name: "极性精通V", 
+        ndes: "", 
+        pic: "../../assets/BLM/极性精通5.png", 
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/7JuT00VSwaFqTfcTYUCUnGPFQE.png", 
+        tname: "黑魔法师", 
+        ticon: "", 
+        lvl: "Lv90", 
+        content: "对自身附加悖论标记<BR>发动条件：自身的星极火在最大档数或灵极冰和灵极心在最大档数时，切换至相反属性", 
+        change: "新增特性"
     }
 ];
 
