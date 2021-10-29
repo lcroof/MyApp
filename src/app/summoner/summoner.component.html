@@ -53,7 +53,7 @@
                                             <span>效果</span>
                                         </div>
                                         <div class="job_item item8_8">
-                                            <span>变更内容</span>
+                                            <span>FFFL的人话评价</span>
                                         </div>
                                     </div>
                                     <div class="job_tbody" *ngFor="let item of skills">
@@ -63,8 +63,8 @@
                                                     <div class="skill_icon">
                                                         <img src="{{item.pic}}" width="40" height="40" alt="" />
                                                     </div>
-                                                    <p class="skill_txt"><strong>{{item.name}}</strong><strong class="des" *ngIf="item.ndes!==''">通过特职任务获得</strong>
-                                                    </p>
+                                                    <strong><div class="skill_txt" [innerHTML]=[item.name]></div></strong>
+                                                    <!-- <p class="skill_txt"><strong>{{item.name}}</strong><strong class="des" *ngIf="item.ndes!==''">通过特职任务获得</strong></p> -->
                                                 </div>
                                                 <div class="job_titem item8_1">
                                                     <div class="waper_icon">
