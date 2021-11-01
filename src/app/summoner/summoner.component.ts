@@ -42,7 +42,7 @@ export class SummonerComponent implements OnInit {
       distant: "0", 
       range:0, 
       content: "召唤有辅助能力的宝石兽同行", 
-      change: "召唤兽不在有自动攻击，和攻击技能<>仅作为使用特定技能的条件存在"
+      change: "召唤兽不再有自动攻击和攻击技能<BR>仅作为使用特定技能的条件存在"
    }, 
    {
       name: "Radiant Aegis<BR>守护之光",
@@ -229,7 +229,7 @@ export class SummonerComponent implements OnInit {
       distant: "25", 
       range: "5", 
       content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：100", 
-      change: "威力上调，习得等级更变"
+      change: "威力上调，习得条件的等级更变"
    },
    {
       name: "Precious Brilliance<BR>宝石之耀", 
@@ -553,7 +553,7 @@ export class SummonerComponent implements OnInit {
        range: "5", 
        content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：650<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：亚灵神巴哈姆特显现中<BR><BR>※该技能无法设置到热键栏", 
        change: "暂不可知是否还存在召唤兽系数"
-    },, 
+    },
     {
        name: "Ruby Rite<BR>红宝石之仪", 
        ndes: "", 
@@ -654,7 +654,7 @@ export class SummonerComponent implements OnInit {
        distant: "25", 
        range:0, 
        content: "对目标发动火属性魔法攻击　威力：430<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏", 
-       change: "重做为单独的单体技能，不在为连击"
+       change: "重做为单独的单体技能，不再为连击"
     }, 
     {
        name: "炼狱之炎", 
@@ -671,7 +671,7 @@ export class SummonerComponent implements OnInit {
        distant: "25", 
        range: "8", 
        content: "对目标及其周围敌人发动火属性魔法攻击　威力：180<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏", 
-       change: "重做为单独的AOE技能，不在为连击"
+       change: "重做为单独的AOE技能，不再为连击"
     }, 
     {
        name: "Rekindle<BR>再生之炎", 
@@ -1073,7 +1073,7 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "为自身附加红宝石奥秘、黄宝石奥秘状态<BR>发动条件：发动以太充能时", 
-      change: ""
+      change: "新增特性"
    },
    {
        name: "技能效果提高", 
@@ -1107,12 +1107,12 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "为自身附加红宝石奥秘、黄宝石奥秘、绿宝石奥秘状态<BR>发动条件：发动以太充能时", 
-      change: ""
+      change: "新增特性"
    },
    {
-      name: "毁灭变为毁坏", 
+      name: "毁灭精通", 
       ndes: "", 
-      pic: "../../assets/SMN/毁灭变为毁坏.png", 
+      pic: "../../assets/SMN/毁灭精通.png", 
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png", 
       tname: "秘术师", 
       ticon: "", 
@@ -1124,12 +1124,12 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "毁灭变为毁坏", 
-      change: ""
+      change: "习得条件从Lv54变更为Lv30，效果从「毁灭变为毁荡」变更为「毁灭变为毁坏」"
    },
    {
       name: "红宝石兽召唤精通", 
       ndes: "", 
-      pic: "../../assets/SMN/.png", 
+      pic: "../../assets/SMN/红宝石兽召唤精通.png", 
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png", 
       tname: "召唤师", 
       ticon: "", 
@@ -1141,7 +1141,7 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "红宝石兽召唤变为火神召唤", 
-      change: ""
+      change: "新增特性"
    }, 
    {
       name: "黄宝石兽召唤精通", 
@@ -1158,7 +1158,7 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "黄宝石兽召唤变为土神召唤", 
-      change: ""
+      change: "新增特性"
    },
     {
        name: "技能效果提高II", 
@@ -1192,7 +1192,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "绿宝石兽召唤变为风神召唤", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "内力迸发", 
@@ -1209,7 +1209,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "火神召唤、土神召唤、风神召唤的召唤兽发动的技能产生变化<BR>伊弗利特之灵：燃火强袭变为地狱之火炎<BR>泰坦之灵：碎岩变为大地之怒<BR>迦楼罗之灵：大气风斩变为大气爆发", 
-       change: ""
+       change: "新增特性"
     },
     {
       name: "毁灭精通II", 
@@ -1226,7 +1226,7 @@ export class SummonerComponent implements OnInit {
       distant: "", 
       range: "", 
       content: "毁坏变为毁荡", 
-      change: ""
+      change: "新增特性"
     },
     {
        name: "以太充能精通", 
@@ -1243,7 +1243,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "以太充能变为龙神附体", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "能量抽取效果提高", 
@@ -1260,7 +1260,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "为自身附加毁绝预备状态<BR>发动条件：发动能量吸收和能量抽取时", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "龙神附体效果提高", 
@@ -1276,8 +1276,8 @@ export class SummonerComponent implements OnInit {
        cost: "", 
        distant: "", 
        range: "", 
-       content: "自身附体深度加深1档<BR>发动条件：龙神附体状态结束时", 
-       change: ""
+       content: "龙神附体变为龙神召唤", 
+       change: "效果从「自身附体深度加深1档 发动条件：龙神附体状态结束时」变更为「龙神附体变为龙神召唤」"
     },
     {
        name: "毁灭精通III", 
@@ -1294,7 +1294,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "宝石之光根据自身以太效果发动对应技能<BR>火属性以太时效果：变为红宝石之仪<BR>土属性以太时效果：变为黄宝石之仪<BR>风属性以太时效果：变为绿宝石之仪", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "迸裂精通", 
@@ -1311,7 +1311,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "迸裂变为三重灾祸", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "龙神召唤效果提高", 
@@ -1328,7 +1328,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "龙神召唤变为不死鸟召唤<BR>发动条件：亚灵神巴哈姆特显现结束", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "迸裂精通II", 
@@ -1345,7 +1345,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "宝石之耀根据自身以太效果产生变化<BR>火属性以太时效果：变为红宝石之灾<BR>土属性以太时效果：变为黄宝石之灾<BR>风属性以太时效果：变为绿宝石之灾", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "毁灭精通IV", 
@@ -1362,7 +1362,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "毁荡威力提高到310，红宝石之仪威力提高到430，黄宝石之仪威力提高到330，绿宝石之仪威力提高到230", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "元素精通", 
@@ -1379,7 +1379,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "星极超流根据自身以太效果产生变化<BR>火属性以太时效果：变为深红旋风<BR>土属性以太时效果：变为山崩<BR>风属性以太时效果：变为螺旋气流", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "守护之光效果提高", 
@@ -1396,7 +1396,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "守护之光变为积蓄技能<BR>积蓄次数：2", 
-       change: ""
+       change: "新增特性"
     },
     {
        name: "召唤精通IV", 
@@ -1413,7 +1413,7 @@ export class SummonerComponent implements OnInit {
        distant: "", 
        range: "", 
        content: "火神召唤变为火神召唤II，土神召唤变为土神召唤II，风神召唤变为风神召唤II", 
-       change: ""
+       change: "新增特性"
     }
 ];
 
