@@ -960,7 +960,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "冲向目标并对目标及其周围敌人造成火属性范围魔法攻击  威力：430<BR>攻击复数目标时，对目标之外的敌人威力降低65%<BR>发动条件：深红旋风预备状态中<BR>止步状态下无法发动<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在深红旋风预备状态下的替换技能，带有突进效果，与深红打击为2连击"
+         change: "星极超流在深红旋风预备状态下的替换技能，带有突进效果，与深红强袭为2连击"
       },
       {
          isDisabled: "false",
