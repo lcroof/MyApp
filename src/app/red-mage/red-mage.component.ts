@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RedMageComponent implements OnInit {
 
+  today: Date = new Date();
+
   skills: any[] = [
     {
       name: "回刺",
@@ -22,9 +24,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "-",
       distant: "3",
-      range: 0,
-      content: "对目标发动物理攻击　威力：130<BR>平衡量谱中黑魔元与白魔元都在30点以上时，该技能变为魔回刺",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：130<BR>平衡量谱中黑魔元与白魔元都在20点以上时，该技能变为魔回刺",
+      change: "技能变为魔回刺的条件从「黑魔元与白魔元都在30点以上」变更为「黑魔元与白魔元都在20点以上」"
     },
     {
       name: "摇荡",
@@ -39,9 +42,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力200",
       distant: "25",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：180<BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：170<BR>追加效果：获得2点黑魔元与2点白魔元",
+      change: "威力从180变更为170<BR>追加效果从「获得3点黑魔元与3点白魔元」变更为「获得2点黑魔元与2点白魔元」"
     },
     {
       name: "赤闪雷",
@@ -56,9 +60,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力300",
       distant: "25",
-      range: 0,
-      content: "对目标发动雷属性魔法攻击　威力：370<BR>追加效果：获得11点黑魔元<BR>追加效果（发动几率50%）：赤火炎预备　持续时间：30秒",
-      change: "威力提升到370"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动雷属性魔法攻击　威力：360<BR>追加效果：获得6点黑魔元<BR>追加效果（发动几率50%）：赤火炎预备　持续时间：30秒",
+      change: "威力从370变更为360<BR>追加效果从「获得11点黑魔元」变更为「获得6点黑魔元」"
     },
     {
       name: "短兵相接",
@@ -73,9 +78,10 @@ export class RedMageComponent implements OnInit {
       recast: "40秒",
       cost: "-",
       distant: "25",
-      range: 0,
-      content: "冲向目标并发动物理攻击　威力：130<BR>止步状态下无法发动",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "冲向目标并发动物理攻击　威力：100<BR>积蓄次数：2<BR>止步状态下无法发动",
+      change: "复唱时间从40变更为35<BR>威力从130变更为100<BR>新增积蓄次数：2"
     },
     {
       name: "赤疾风",
@@ -90,9 +96,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力300",
       distant: "25",
-      range: 0,
-      content: "对目标发动风属性魔法攻击　威力：370<BR>追加效果：获得11点白魔元<BR>追加效果（发动几率50%）：赤飞石预备　持续时间：30秒",
-      change: "威力提升到370"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动风属性魔法攻击　威力：360<BR>追加效果：获得6点白魔元<BR>追加效果（发动几率50%）：赤飞石预备　持续时间：30秒 ",
+      change: "威力从370变更为360<BR>追加效果从「获得11点白魔元」变更为「获得6点白魔元」"
     },
     {
       name: "散碎",
@@ -108,8 +115,9 @@ export class RedMageComponent implements OnInit {
       cost: "魔力400",
       distant: "25",
       range: "5",
+      rangeType: "circle",
       content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：120<BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: "习得等级从18变更为15。<br>威力从100变更为120。<br>删除“追加效果（发动几率30%）：散碎效果提高　效果时间：10秒<br>“散碎效果提高”状态中追加效果：获得10点黑魔元与10点白魔元”。<br>咏唱时间从2秒变更为5秒。"
+      change: ""
     },
     {
       name: "赤震雷",
@@ -125,8 +133,9 @@ export class RedMageComponent implements OnInit {
       cost: "魔力400",
       distant: "25",
       range: "5",
-      content: "对目标及其周围敌人发动雷属性魔法攻击　威力：120<BR>追加效果：获得7点黑魔元",
-      change: ""
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动雷属性魔法攻击　威力：140<BR>追加效果：获得7点黑魔元",
+      change: "威力从120变更为140"
     },
     {
       name: "赤烈风",
@@ -142,8 +151,9 @@ export class RedMageComponent implements OnInit {
       cost: "魔力400",
       distant: "25",
       range: "5",
-      content: "对目标及其周围敌人发动风属性魔法攻击　威力：120<BR>追加效果：获得7点白魔元",
-      change: ""
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动风属性魔法攻击　威力：140<BR>追加效果：获得7点白魔元",
+      change: "威力从120变更为140"
     },
     {
       name: "赤火炎",
@@ -158,9 +168,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力200",
       distant: "25",
-      range: 0,
-      content: "对目标发动火属性魔法攻击　威力：300<BR>追加效果：获得9点黑魔元<BR>发动条件：赤火炎预备状态中",
-      change: "威力提升到300"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动火属性魔法攻击　威力：330<BR>追加效果：获得5点黑魔元<BR>发动条件：赤火炎预备状态中 ",
+      change: "威力从300变更为330<BR>追加效果从「获得9点黑魔元」变更为「获得5点黑魔元」"
     },
     {
       name: "赤飞石",
@@ -175,9 +186,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力200",
       distant: "25",
-      range: 0,
-      content: "对目标发动土属性魔法攻击　威力：300<BR>追加效果：获得9点白魔元<BR>发动条件：赤飞石预备状态中",
-      change: "威力提升到300"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动土属性魔法攻击　威力：330<BR>追加效果：获得5点白魔元<BR>发动条件：赤飞石预备状态中",
+      change: "威力从300变更为330<BR>追加效果从「获得9点白魔元」变更为「获得5点白魔元」"
     },
     {
       name: "交击斩",
@@ -192,9 +204,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "-",
       distant: "3",
-      range: 0,
-      content: "对目标发动物理攻击　威力：100<BR>连击条件：回刺或魔回刺　连击中威力：150<BR>平衡量谱中黑魔元与白魔元都在25点以上时，该技能变为魔交击斩",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：100<BR>连击条件：回刺或魔回刺　连击中威力：150<BR>平衡量谱中黑魔元与白魔元都在15点以上时，该技能变为魔交击斩",
+      change: "技能变为魔交击斩的条件从「黑魔元与白魔元都在25点以上」变更为「黑魔元与白魔元都在15点以上」"
     },
     {
       name: "移转",
@@ -209,9 +222,28 @@ export class RedMageComponent implements OnInit {
       recast: "35秒",
       cost: "-",
       distant: "5",
-      range: 0,
-      content: "对目标发动物理攻击　威力：200<BR>追加效果：后跳15米距离<BR>止步状态下无法发动<BR>与交剑共享复唱时间",
-      change: "威力从130变更为200。<br>新增“与交剑共享复唱时间”。"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：150<BR>追加效果：后跳15米距离<BR>积蓄次数：2<BR>止步状态下无法发动<BR>与交剑共享复唱时间",
+      change: "威力从200变更为150<BR>新增积蓄次数：2"
+    },
+    {
+      name: "交剑",
+      ndes: "",
+      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_26.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv72",
+      classification: "能力",
+      cast: "即时",
+      recast: "35秒",
+      cost: "-",
+      distant: "3",
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：150<BR>积蓄次数：2<BR>与移转共享复唱时间 ",
+      change: "习得条件从L72变更为LV40<BR>新增积蓄次数：2"
     },
     {
       name: "飞刺",
@@ -226,9 +258,10 @@ export class RedMageComponent implements OnInit {
       recast: "25秒",
       cost: "-",
       distant: "25",
-      range: 0,
-      content: "对目标发动物理攻击　威力：440",
-      change: "威力从420变更为440"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：420",
+      change: "威力从440变更为420"
     },
     {
       name: "连攻",
@@ -243,9 +276,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "-",
       distant: "3",
-      range: 0,
-      content: "对目标发动物理攻击　威力：100<BR>连击条件：交击斩或魔交击斩<BR>连击中威力：230<BR>平衡量谱中黑魔元与白魔元都在25点以上时，该技能变为魔连攻",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：100<BR>连击条件：交击斩或魔交击斩<BR>连击中威力：230<BR>平衡量谱中黑魔元与白魔元都在15点以上时，该技能变为魔连攻 ",
+      change: "技能变为魔连攻的条件从「黑魔元与白魔元都在25点以上」变更为「黑魔元与白魔元都在15点以上」"
     },
     {
       name: "促进",
@@ -260,9 +294,10 @@ export class RedMageComponent implements OnInit {
       recast: "55秒",
       cost: "-",
       distant: 0,
-      range: 0,
-      content: "一定时间内，前3次能附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%<BR>持续时间：20秒",
-      change: "效果由「一定时间内，下次能附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%」改为「一定时间内，前3次能附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%」<br>持续时间由10秒变为20秒<br>复唱时间由35秒变为55秒"
+      range: "0",
+      rangeType: "zero",
+      content: "一定时间内，前3次能附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%<BR>持续时间：20秒<BR>积蓄次数：2",
+      change: "新增积蓄次数：2"
     },
     {
       name: "划圆斩",
@@ -278,8 +313,9 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: "8",
       range: "8",
-      content: "向目标所在方向发出扇形范围物理攻击　威力：60<BR>平衡量谱中黑魔元与白魔元都在20点以上时，该技能变为魔划圆斩",
-      change: "射程与范围由6m变为8m"
+      rangeType: "sector",
+      content: "向目标所在方向发出扇形范围物理攻击　威力：60 <BR>平衡量谱中黑魔元与白魔元都在20点以上时，该技能变为魔划圆斩",
+      change: ""
     },
     {
       name: "赤治疗",
@@ -294,7 +330,8 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力500",
       distant: "30",
-      range: 0,
+      range: "0",
+      rangeType: "zero",
       content: "恢复目标的体力　恢复力：350",
       change: ""
     },
@@ -312,8 +349,8 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: "25",
       range: "6",
-      content: "对目标及其周围敌人发动范围物理攻击　威力：400",
-      change: "・威力从380变更为400。<br>・删除「攻击复数敌人时，对目标之外的敌人威力降低50%」。"
+      content: "对目标及其周围敌人发动范围物理攻击　威力：380",
+      change: "威力从400变更为380"
     },
     {
       name: "鼓励",
@@ -329,8 +366,8 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: 0,
       range: "15",
-      content: "一定时间内，自身发动魔法攻击造成的伤害提高10%<BR>持续时间：20秒<BR>此效果每4秒降低2%<BR>追加效果：令周围队员发动物理攻击造成的伤害提高10%<BR>持续时间：20秒<BR>此效果每4秒降低2%",
-      change: ""
+      content: "一定时间内，自身发动魔法攻击造成的伤害提高10% <BR>持续时间：20秒 <BR>此效果每4秒降低2% <BR>追加效果：令周围队员发动攻击造成的伤害提高10% <BR>持续时间：20秒 <BR>此效果每4秒降低2%",
+      change: "追加效果从「令周围队员发动物理攻击造成的伤害提高10%」变更为「令周围队员发动攻击造成的伤害提高10%」"
     },
     {
       name: "倍增",
@@ -345,9 +382,10 @@ export class RedMageComponent implements OnInit {
       recast: "110秒",
       cost: "-",
       distant: 0,
-      range: 0,
-      content: "当前平衡量谱中积累的量值翻倍<BR>追加效果：重置短兵相接和转移以及交剑的复唱时间<BR>追加效果：自身发动魔法攻击造成的伤害提高5%<BR>持续时间：10秒<BR>此技能会中断连击",
-      change: "追加效果的対象新增“交剑”。<br>新增“追加效果：自身发动魔法攻击造成的伤害提高5%。<br>效果时间：10秒”。<br>复唱时间从120秒变更为110秒。"
+      range: "0",
+      rangeType: "zero",
+      content: "获得50点黑魔元与50点白魔元 <BR>追加效果：恢复1次短兵相接和转移以及交剑的充能 <BR>追加效果：获得6档倍增 <BR>倍增效果：自身发动魔法攻击造成的伤害提高5% <BR>持续时间：15秒 <BR>此技能会中断连击 <BR>发动条件：自身处于战斗状态",
+      change: "完全重做"
     },
     {
       name: "震荡",
@@ -362,9 +400,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力200",
       distant: "25",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：290<BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: "威力从280变更为290。"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：310 <BR>追加效果：获得2点黑魔元与2点白魔元",
+      change: "威力从290变更为310<BR>追加效果从「获得3点黑魔元与3点白魔元」变更为「获得2点黑魔元与2点白魔元」"
     },
     {
       name: "赤复活",
@@ -379,7 +418,8 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力2400",
       distant: "30",
-      range: 0,
+      range: "0",
+      rangeType: "zero",
       content: "令无法战斗的目标以衰弱状态重新振作起来",
       change: ""
     },
@@ -397,8 +437,9 @@ export class RedMageComponent implements OnInit {
       cost: "魔力400",
       distant: "25",
       range: "5",
-      content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：220<BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: "效果更新。"
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：210 <BR>追加效果：获得3点黑魔元与3点白魔元",
+      change: "威力从220变更为210"
     },
     {
       name: "赤核爆",
@@ -413,9 +454,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力400",
       distant: "25",
-      range: 0,
-      content: "对目标发动火属性魔法攻击　威力：600<BR>连击条件：魔连攻<BR>追加效果：获得21点黑魔元<BR>追加效果（发动几率20%）：赤火炎预备　持续时间：30秒<BR>发动时白魔元高于黑魔元则100%发动追加效果<BR>发动条件：魔连攻成功时<BR>若满足发动条件，则赤闪雷变为赤核爆<BR><BR>※该技能无法设置到热键栏",
-      change: "新增“若满足发动条件，则赤闪雷变为赤核爆”。<br>新增“※该技能无法设置到热键栏”。"
+      range: "5",
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动火属性魔法攻击　威力：580<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：获得11点黑魔元 <BR>追加效果（发动几率20%）：赤火炎预备　持续时间：30秒 <BR>发动时白魔元高于黑魔元则100%发动追加效果 <BR>发动条件：3档魔元结晶  <BR> <BR>※该技能无法设置到热键栏",
+      change: "完全重做"
     },
     {
       name: "赤神圣",
@@ -430,26 +472,10 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力400",
       distant: "25",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：600<BR>连击条件：魔连攻<BR>追加效果：获得21点白魔元<BR>追加效果（发动几率20%）：赤飞石预备　持续时间：30秒<BR>发动时黑魔元高于白魔元则100%发动追加效果<BR>发动条件：魔连攻成功时<BR>若满足发动条件，则赤疾风变为赤神圣<BR><BR>※该技能无法设置到热键栏",
-      change: "新增“若满足发动条件，则赤疾风变为赤神圣”。<br>新增“※该技能无法设置到热键栏”。"
-    },
-    {
-      name: "交剑",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_26.png",
-      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
-      tname: "赤魔法师",
-      ticon: "",
-      lvl: "Lv72",
-      classification: "能力",
-      cast: "即时",
-      recast: "35秒",
-      cost: "-",
-      distant: "3",
-      range: 0,
-      content: "对目标发动物理攻击　威力：150<BR>与移转共享复唱时间",
-      change: ""
+      range: "5",
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动无属性魔法攻击　威力：580 <BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：获得11点白魔元 <BR>追加效果（发动几率20%）：赤飞石预备　持续时间：30秒 <BR>发动时黑魔元高于白魔元则100%发动追加效果 <BR>发动条件：3档魔元结晶 <BR> <BR>※该技能无法设置到热键栏",
+      change: "完全重做"
     },
     {
       name: "续斩",
@@ -464,8 +490,9 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "-",
       distant: "3",
-      range: 0,
-      content: "对目标发动物理攻击　威力：100<BR>平衡量谱中黑魔元与白魔元都在5点以上时，该技能变为魔续斩",
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动物理攻击　威力：100 <BR>平衡量谱中黑魔元与白魔元都在5点以上时，该技能变为魔续斩",
       change: ""
     },
     {
@@ -481,9 +508,82 @@ export class RedMageComponent implements OnInit {
       recast: "2.5秒",
       cost: "魔力400",
       distant: "25",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：700<BR>连击条件：赤核爆或赤神圣<BR>追加效果：获得7点黑魔元与7点白魔元<BR>发动条件：赤核爆或赤神圣成功时<BR>满足发动条件后，震荡变为焦热<BR><BR>※该技能无法设置到热键栏",
-      change: ""
+      range: "5",
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动无属性魔法攻击　威力：680 <BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>连击条件：赤核爆或赤神圣 <BR>追加效果：获得4点黑魔元与4点白魔元 <BR>发动条件：赤核爆或赤神圣成功时 <BR>满足发动条件后，震荡和冲击变为焦热 <BR> <BR>※该技能无法设置到热键栏",
+      change: "完全重做"
+    },
+    {
+      name: "Verthunder III<BR>赤暴雷",
+      ndes: "",
+      pic: "../../assets/RDM/赤暴雷.jpg",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv82",
+      classification: "魔法",
+      cast: "5秒",
+      recast: "2.5秒",
+      cost: "魔力300",
+      distant: "25",
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动雷属性魔法攻击　威力：380 <BR>追加效果：获得6点黑魔元 <BR>追加效果（发动几率50%）：赤火炎预备　持续时间：30秒",
+      change: "新增技能"
+    },
+    {
+      name: "Veraero III<BR>赤暴风",
+      ndes: "",
+      pic: "../../assets/RDM/赤暴风.jpg",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv82",
+      classification: "魔法",
+      cast: "5秒",
+      recast: "2.5秒",
+      cost: "魔力300",
+      distant: "25",
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动风属性魔法攻击　威力：380 <BR>追加效果：获得6点白魔元 <BR>追加效果（发动几率50%）：赤飞石预备　持续时间：30秒",
+      change: "新增技能"
+    },
+    {
+      name: "Magick Barrier<BR>魔法屏障",
+      ndes: "",
+      pic: "../../assets/RDM/魔法屏障.jpg",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv86",
+      classification: "能力",
+      cast: "即时",
+      recast: "120秒",
+      cost: "-",
+      distant: "0",
+      range: "15",
+      rangeType: "circle",
+      content: "一定时间内自身与周围队员的所受到的魔法伤害减轻10%，所受的恢复效果提高5%<BR>持续时间：10秒",
+      change: "新增技能"
+    },
+    {
+      name: "Resolution<BR>决心",
+      ndes: "",
+      pic: "../../assets/RDM/决心.jpg",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv90",
+      classification: "魔法",
+      cast: "即时",
+      recast: "2.5秒",
+      cost: "魔力400",
+      distant: "25",
+      range: "25",
+      rangeType: "line",
+      content: "向目标所在方向发出直线范围无属性魔法攻击　威力：750 <BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>连击条件：焦热<BR>追加效果：获得4点黑魔元与4点白魔元 <BR>发动条件：焦热成功时 <BR>满足发动条件后，焦热变为决心 <BR> <BR>※该技能无法设置到热键栏 ",
+      change: "新增技能"
     },
     {
       name: "魔回刺",
@@ -496,11 +596,12 @@ export class RedMageComponent implements OnInit {
       classification: "战技",
       cast: "即时",
       recast: "1.5秒",
-      cost: "「黑魔元」30<br>「白魔元」30",
+      cost: "「黑魔元」20<BR>「白魔元」20",
       distant: "3",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：220<BR>发动条件：黑魔元、白魔元各30点<BR><BR>※该技能无法设置到热键栏",
-      change: "威力从210变更为220。"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：220 <BR>发动条件：黑魔元、白魔元各20点 <BR>追加效果：附加1档魔元结晶<BR><BR>※该技能无法设置到热键栏",
+      change: "发动条件从「黑魔元、白魔元各30点」变更为「黑魔元、白魔元各20点」<BR>新增追加效果：附加1档魔元结晶"
     },
     {
       name: "魔交击斩",
@@ -513,11 +614,12 @@ export class RedMageComponent implements OnInit {
       classification: "战技",
       cast: "即时",
       recast: "1.5秒",
-      cost: "「黑魔元」25<br>「白魔元」25",
+      cost: "「黑魔元」15<BR>「白魔元」15",
       distant: "3",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：100<BR>连击条件：回刺或魔回刺　连击中威力：290<BR>发动条件：黑魔元、白魔元各25点<BR><BR>※该技能无法设置到热键栏",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：100 <BR>连击条件：回刺或魔回刺　连击中威力：290 <BR>发动条件：黑魔元、白魔元各15点 <BR>追加效果：附加1档魔元结晶<BR><BR>※该技能无法设置到热键栏",
+      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增追加效果：附加1档魔元结晶"
     },
     {
       name: "魔连攻",
@@ -530,11 +632,12 @@ export class RedMageComponent implements OnInit {
       classification: "战技",
       cast: "即时",
       recast: "2.2秒",
-      cost: "「黑魔元」25<br>「白魔元」25",
+      cost: "「黑魔元」15<BR>「白魔元」15",
       distant: "3",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：100<BR>连击条件：魔交击斩<BR>连击中威力：470<BR>发动条件：黑魔元、白魔元各25点<BR><BR>※该技能无法设置到热键栏",
-      change: ""
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：100 <BR>连击条件：魔交击斩 <BR>连击中威力：470 <BR>发动条件：黑魔元、白魔元各15点 <BR>追加效果：附加1档魔元结晶<BR> <BR>※该技能无法设置到热键栏",
+      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增追加效果：附加1档魔元结晶"
     },
     {
       name: "魔划圆斩",
@@ -550,8 +653,9 @@ export class RedMageComponent implements OnInit {
       cost: "「黑魔元」20<br>「白魔元」20",
       distant: "8",
       range: "8",
-      content: "向目标所在方向发出扇形范围魔法攻击　威力：200<BR>发动条件：黑魔元、白魔元各20点<BR><BR>※该技能无法设置到热键栏",
-      change: "射程与范围由6m变为8m"
+      rangeType: "sector",
+      content: "向目标所在方向发出扇形范围魔法攻击　威力：130 <BR>发动条件：黑魔元、白魔元各20点 <BR>追加效果：附加1档魔元结晶<BR> <BR>※该技能无法设置到热键栏",
+      change: "威力从200变更为130<BR>新增追加效果：附加1档魔元结晶"
     },
     {
       name: "魔续斩",
@@ -563,115 +667,150 @@ export class RedMageComponent implements OnInit {
       lvl: "Lv76",
       classification: "战技",
       cast: "即时",
-      recast: "2.2秒",
+      recast: "2.5秒",
       cost: "「黑魔元」5<br>「白魔元」5",
       distant: "25",
-      range: 0,
-      content: "对目标发动无属性魔法攻击　威力：300<BR>发动条件：黑魔元与白魔元各5点<BR><BR>※该技能无法设置到热键栏",
-      change: "威力由250变为300"
+      range: "0",
+      rangeType: "zero",
+      content: "对目标发动无属性魔法攻击　威力：330 <BR>发动条件：黑魔元与白魔元各5点 <BR> <BR>※该技能无法设置到热键栏",
+      change: "复唱时间从2.2秒变更为2.5秒<BR> 威力从300变更为330"
     }
   ];
 
   roleSkills: any[] = [
     {
-      name: "昏乱",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_01.png",
-      tiurl: "",
-      tname: "远程魔法职业",
-      ticon: [{
-        url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
-        tname: "远程魔法职业"
-      }],
-      lvl: "Lv8",
-      classification: "能力",
-      cast: "即时",
-      recast: "90秒",
-      cost: "-",
-      distant: "25",
-      range: 0,
-      content: "一定时间内，令目标的智力与精神降低10%<BR>持续时间：10秒",
-      change: ""
+        isDisabled: "false",
+        name: "昏乱",
+        ndes: "",
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_01.png",
+        tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+        tname: "远程魔法职业",
+        ticon: [
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+                tname: "远程魔法职业"
+            }
+        ],
+        lvl: "Lv8",
+        classification: "能力",
+        cast: "即时",
+        recast: "90秒",
+        cost: "-",
+        distant: "25",
+        range: "0",
+        rangeType: "zero",
+        content: "一定时间内，令目标的物理伤害降低5%，魔法伤害降低10% <BR>持续时间：10秒",
+        change: "效果从「令目标的智力与精神降低10% 」变更为「令目标的物理伤害降低5%，魔法伤害降低10% 」"
     },
     {
-      name: "即刻咏唱",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_02.png",
-      tiurl: "",
-      tname: "",
-      ticon: [
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
-          tname: "治疗职业"
-        },
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
-          tname: "远程魔法职业"
-        }
-      ],
-      lvl: "Lv18",
-      classification: "能力",
-      cast: "即时",
-      recast: "60秒",
-      cost: "-",
-      distant: 0,
-      range: 0,
-      content: "一定时间内，下次咏唱的魔法没有任何咏唱时间<BR>持续时间：10秒",
-      change: "习得等级从32变更为18。"
+        isDisabled: "false",
+        name: "催眠",
+        ndes: "",
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Action_05.png",
+        tiurl: "",
+        tname: "",
+        ticon: [
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+                tname: "远程魔法职业"
+            }
+        ],
+        lvl: "Lv10",
+        classification: "魔法",
+        cast: "2.5秒",
+        recast: "2.5秒",
+        cost: "800",
+        distant: "30",
+        range: "5",
+        rangeType: "circle",
+        content: "令目标及其周围的敌人陷入睡眠状态<BR>持续时间：30秒<BR>发动之后会停止自动攻击",
+        change: "新增特性"
     },
     {
-      name: "醒梦",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_03.png",
-      tiurl: "",
-      tname: "",
-      ticon: [
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
-          tname: "治疗职业"
-        },
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
-          tname: "远程魔法职业"
-        }
-      ],
-      lvl: "Lv24",
-      classification: "能力",
-      cast: "即时",
-      recast: "60秒",
-      cost: "-",
-      distant: 0,
-      range: 0,
-      content: "持续恢复自身魔力<BR>效果量：50　持续时间：21秒",
-      change: "删除“将自身的仇恨减半”。<br>复唱时间从120秒变更为60秒。<br>效果量从80变更为50。"
+        isDisabled: "false",
+        name: "即刻咏唱",
+        ndes: "",
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_02.png",
+        tiurl: "",
+        tname: "",
+        ticon: [
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+                tname: "治疗职业"
+            },
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+                tname: "远程魔法职业"
+            }
+        ],
+        lvl: "Lv18",
+        classification: "能力",
+        cast: "即时",
+        recast: "60秒",
+        cost: "-",
+        distant: "0",
+        range: "0",
+        rangeType: "zero",
+        content: "一定时间内，下次咏唱的魔法没有任何咏唱时间<BR>持续时间：10秒",
+        change: ""
     },
     {
-      name: "沉稳咏唱",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_04.png",
-      tiurl: "",
-      tname: "",
-      ticon: [
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
-          tname: "治疗职业"
-        },
-        {
-          url: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
-          tname: "远程魔法职业"
-        }
-      ],
-      lvl: "Lv44",
-      classification: "能力",
-      cast: "即时",
-      recast: "120秒",
-      cost: "-",
-      distant: 0,
-      range: 0,
-      content: "一定时间内，咏唱的魔法不会被任何妨碍打断<BR>同时，令除特定攻击之外其他所有击退与吸引效果失效<BR>持续时间：6秒",
-      change: "复唱时间从30秒变更为120秒。<br>效果时间从5秒变更为6秒。"
+        isDisabled: "false",
+        name: "醒梦",
+        ndes: "",
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_03.png",
+        tiurl: "",
+        tname: "",
+        ticon: [
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+                tname: "治疗职业"
+            },
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+                tname: "远程魔法职业"
+            }
+        ],
+        lvl: "Lv24",
+        classification: "能力",
+        cast: "即时",
+        recast: "60秒",
+        cost: "-",
+        distant: "0",
+        range: "0",
+        rangeType: "zero",
+        content: "持续恢复自身魔力<BR>效果量：50　持续时间：21秒",
+        change: ""
+    },
+    {
+        isDisabled: "false",
+        name: "沉稳咏唱",
+        ndes: "",
+        pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Black Mage/Magical Ranged DPS Role Action_04.png",
+        tiurl: "",
+        tname: "",
+        ticon: [
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+                tname: "治疗职业"
+            },
+            {
+                "url": "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+                tname: "远程魔法职业"
+            }
+        ],
+        lvl: "Lv44",
+        classification: "能力",
+        cast: "即时",
+        recast: "120秒",
+        cost: "-",
+        distant: "0",
+        range: "0",
+        rangeType: "zero",
+        content: "一定时间内，咏唱的魔法不会被任何妨碍打断<BR>同时，令除特定攻击之外其他所有击退与吸引效果失效<BR>持续时间：6秒",
+        change: ""
     }
-  ];
+];
 
 
   traits: any[] = [
@@ -683,7 +822,7 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv1",
-      content: "发动有咏唱时间的魔法时，对自身附加连续咏唱状态<BR>连续咏唱效果：下次咏唱魔法不需要咏唱时间<BR>若在持续时间中发动自动攻击或能力之外的技能，会立即解除连续咏唱状态",
+      content: "发动有咏唱时间的魔法时，对自身附加连续咏唱状态 <BR>连续咏唱效果：下次咏唱魔法不需要咏唱时间 <BR>若在持续时间中发动自动攻击或能力之外的技能，会立即解除连续咏唱状态",
       change: ""
     },
     {
@@ -716,8 +855,8 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv62",
-      content: "摇荡变为震荡<br>将赤闪雷和赤疾风的威力提高到370,将赤火炎和赤飞石的威力提高到310。",
-      change: "赤火炎和赤飞石的威力提升从300变更为310。"
+      content: "摇荡变为震荡<BR>将赤闪雷和赤疾风的威力提高到360,将赤火炎和赤飞石的威力提高到300。",
+      change: "赤闪雷和赤疾风的威力提高从370变更为360,赤火炎和赤飞石的威力提升从310变更为300。"
     },
     {
       name: "散碎精通",
@@ -731,6 +870,17 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      name: "魔法剑效果提高",
+      ndes: "",
+      pic: "../../assets/RDM/魔法剑效果提高.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv68",
+      content: "对自身附加1档魔元结晶。<BR>最大档数：3档<BR>在魔元结晶累积到3档魔元结晶时，赤闪雷和赤震雷会变为赤核爆，赤疾风和赤烈风会变为赤神圣。<BR>发动条件：魔回刺、魔交击斩、魔连攻、魔划圆斩成功时",
+      change: "新增特性"
+    },
+    {
       name: "移转效果提高",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_06.png",
@@ -738,30 +888,74 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv72",
-      content: "转移的威力提高到200",
-      change: ""
-    },
-    {
-      name: "倍增效果提高",
-      ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_07.png",
-      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
-      tname: "赤魔法师",
-      ticon: "",
-      lvl: "Lv74",
-      content: "倍增的复唱时间缩短到110秒<BR>并附加自身造成的魔法伤害提高5%的效果",
-      change: ""
+      content: "转移和交剑的威力提高到150",
+      change: "转移和交剑的威力提高从200变更为150"
     },
     {
       name: "六分反击效果提高",
       ndes: "",
-      pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_08.png",
+      pic: "../../assets/RDM/六分反击效果提高.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv74",
+      content: "六分反击的复唱时间缩短到35秒<BR>并将赤震雷与赤烈风的威力提高到120",
+      change: "特性名称从「六分反击效果提高」变更为「赤魔法精通」<BR>习得条件从Lv78变更为Lv74"
+    },
+    {
+      name: "倍增效果提高",
+      ndes: "",
+      pic: "../../assets/RDM/倍增效果提高.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv78",
-      content: "六分反击的复唱时间缩短到35秒<BR>并将赤震雷与赤烈风的威力提高到120",
-      change: ""
+      content: "倍增的复唱时间缩短到110秒<BR>并附加自身造成的魔法伤害提高5%的效果",
+      change: "习得条件从Lv74变更为Lv78"
+    },
+    {
+      name: "赤魔法精通II",
+      ndes: "",
+      pic: "../../assets/RDM/赤魔法精通II.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv82",
+      content: "赤闪雷变为赤暴雷,赤疾风变为赤暴风 <BR>在魔元结晶累积到3档魔元结晶时，赤暴雷会变为赤核爆，赤暴风会变为赤神圣",
+      change: "新增特性"
+    },
+    {
+      name: "赤魔法精通III",
+      ndes: "",
+      pic: "../../assets/RDM/赤魔法精通III.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv84",
+      content: "将赤震雷与赤烈风的威力提高到140，将赤火炎和赤飞石的威力提高到330，将震荡的威力提高到310，将冲击的威力提高到210，将魔续斩的威力提高到330",
+      change: "新增特性"
+    },
+    {
+      name: "促进效果提高",
+      ndes: "",
+      pic: "../../assets/RDM/促进效果提高.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv88",
+      content: "促进变为积蓄技能 <BR>积蓄次数：2",
+      change: "新增特性"
+    },
+    {
+      name: "倍增效果提高II",
+      ndes: "",
+      pic: "../../assets/RDM/倍增效果提高II.png",
+      tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
+      tname: "赤魔法师",
+      ticon: "",
+      lvl: "Lv90",
+      content: "倍增效果的最大档数增加到6档 ",
+      change: "新增特性"
     }
   ];
 
@@ -770,4 +964,8 @@ export class RedMageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    //获取攻击范围图标
+  getRangeImage(rangeType: string) {
+    return "../../assets/rangeUI/" + rangeType + ".png";
+  }
 }
