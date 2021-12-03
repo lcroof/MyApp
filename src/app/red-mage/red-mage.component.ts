@@ -45,7 +45,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：170<BR>追加效果：获得2点黑魔元与2点白魔元",
-      change: "威力从180变更为170<BR>追加效果从「获得3点黑魔元与3点白魔元」变更为「获得2点黑魔元与2点白魔元」"
+      change: "威力从180变更为170<BR>黑魔元与白魔元获得量从3变更为2"
     },
     {
       name: "赤闪雷",
@@ -63,7 +63,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动雷属性魔法攻击　威力：360<BR>追加效果：获得6点黑魔元<BR>追加效果（发动几率50%）：赤火炎预备　持续时间：30秒",
-      change: "威力从370变更为360<BR>追加效果从「获得11点黑魔元」变更为「获得6点黑魔元」"
+      change: "威力从370变更为360<BR>黑魔元获得量从11变更为6"
     },
     {
       name: "短兵相接",
@@ -75,13 +75,13 @@ export class RedMageComponent implements OnInit {
       lvl: "Lv6",
       classification: "能力",
       cast: "即时",
-      recast: "40秒",
+      recast: "35秒",
       cost: "-",
       distant: "25",
       range: "0",
       rangeType: "zero",
-      content: "冲向目标并发动物理攻击　威力：100<BR>积蓄次数：2<BR>止步状态下无法发动",
-      change: "复唱时间从40变更为35<BR>威力从130变更为100<BR>新增积蓄次数：2"
+      content: "冲向目标并发动物理攻击　威力：130<BR>积蓄次数：2<BR>止步状态下无法发动",
+      change: "复唱时间从40变更为35<BR>新增积蓄次数：2"
     },
     {
       name: "赤疾风",
@@ -99,7 +99,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动风属性魔法攻击　威力：360<BR>追加效果：获得6点白魔元<BR>追加效果（发动几率50%）：赤飞石预备　持续时间：30秒 ",
-      change: "威力从370变更为360<BR>追加效果从「获得11点白魔元」变更为「获得6点白魔元」"
+      change: "威力从370变更为360<BR>白魔元获得量从11变更为6"
     },
     {
       name: "散碎",
@@ -116,8 +116,8 @@ export class RedMageComponent implements OnInit {
       distant: "25",
       range: "5",
       rangeType: "circle",
-      content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：120<BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: ""
+      content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：120<BR>促进状态时威力：170<BR>追加效果：获得3点黑魔元与3点白魔元",
+      change: "新增「促进状态时威力：170」"
     },
     {
       name: "赤震雷",
@@ -171,7 +171,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动火属性魔法攻击　威力：330<BR>追加效果：获得5点黑魔元<BR>发动条件：赤火炎预备状态中 ",
-      change: "威力从300变更为330<BR>追加效果从「获得9点黑魔元」变更为「获得5点黑魔元」"
+      change: "威力从310变更为330<BR>黑魔元获得量从9变更为5"
     },
     {
       name: "赤飞石",
@@ -189,7 +189,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动土属性魔法攻击　威力：330<BR>追加效果：获得5点白魔元<BR>发动条件：赤飞石预备状态中",
-      change: "威力从300变更为330<BR>追加效果从「获得9点白魔元」变更为「获得5点白魔元」"
+      change: "威力从310变更为330<BR>白魔元获得量从9变更为5"
     },
     {
       name: "交击斩",
@@ -224,8 +224,8 @@ export class RedMageComponent implements OnInit {
       distant: "5",
       range: "0",
       rangeType: "zero",
-      content: "对目标发动物理攻击　威力：150<BR>追加效果：后跳15米距离<BR>积蓄次数：2<BR>止步状态下无法发动<BR>与交剑共享复唱时间",
-      change: "威力从200变更为150<BR>新增积蓄次数：2"
+      content: "对目标发动物理攻击　威力：180<BR>追加效果：后跳15米距离<BR>积蓄次数：2<BR>止步状态下无法发动<BR>与交剑共享复唱时间",
+      change: "威力从200变更为180<BR>新增积蓄次数：2"
     },
     {
       name: "交剑",
@@ -234,7 +234,7 @@ export class RedMageComponent implements OnInit {
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
-      lvl: "Lv72",
+      lvl: "Lv40",
       classification: "能力",
       cast: "即时",
       recast: "35秒",
@@ -242,8 +242,8 @@ export class RedMageComponent implements OnInit {
       distant: "3",
       range: "0",
       rangeType: "zero",
-      content: "对目标发动物理攻击　威力：150<BR>积蓄次数：2<BR>与移转共享复唱时间 ",
-      change: "习得条件从L72变更为LV40<BR>新增积蓄次数：2"
+      content: "对目标发动物理攻击　威力：180<BR>积蓄次数：2<BR>与移转共享复唱时间 ",
+      change: "习得等级从72变更为40<BR>威力从150变更为180<BR>新增积蓄次数：2"
     },
     {
       name: "飞刺",
@@ -260,8 +260,8 @@ export class RedMageComponent implements OnInit {
       distant: "25",
       range: "0",
       rangeType: "zero",
-      content: "对目标发动物理攻击　威力：420",
-      change: "威力从440变更为420"
+      content: "对目标发动物理攻击　威力：460",
+      change: "威力从440变更为460"
     },
     {
       name: "连攻",
@@ -296,8 +296,8 @@ export class RedMageComponent implements OnInit {
       distant: 0,
       range: "0",
       rangeType: "zero",
-      content: "一定时间内，前3次能附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%<BR>持续时间：20秒<BR>积蓄次数：2",
-      change: "新增积蓄次数：2"
+      content: "一定时间内，自身发动的1次赤暴雷或赤暴风或冲击没有任何咏唱时间<BR>持续时间：20秒<BR>追加效果：冲击的威力提高50<BR>追加效果：附加赤火炎预备状态与赤飞石预备状态的技能追加效果发动率变为100%<BR>积蓄次数：2",
+      change: "效果更新<BR>新增积蓄次数：2"
     },
     {
       name: "划圆斩",
@@ -349,8 +349,9 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: "25",
       range: "6",
-      content: "对目标及其周围敌人发动范围物理攻击　威力：380",
-      change: "威力从400变更为380"
+      rangeType: "circle",
+      content: "对目标及其周围敌人发动范围物理攻击　威力：360",
+      change: "威力从400变更为360"
     },
     {
       name: "鼓励",
@@ -366,8 +367,9 @@ export class RedMageComponent implements OnInit {
       cost: "-",
       distant: 0,
       range: "15",
-      content: "一定时间内，自身发动魔法攻击造成的伤害提高10% <BR>持续时间：20秒 <BR>此效果每4秒降低2% <BR>追加效果：令周围队员发动攻击造成的伤害提高10% <BR>持续时间：20秒 <BR>此效果每4秒降低2%",
-      change: "追加效果从「令周围队员发动物理攻击造成的伤害提高10%」变更为「令周围队员发动攻击造成的伤害提高10%」"
+      rangeType: "circle",
+      content: "一定时间内，自身发动魔法攻击造成的伤害提高5%<BR>持续时间：20秒<BR>追加效果：令周围队员发动攻击造成的伤害提高5% <BR>持续时间：20秒",
+      change: "自身发动魔法攻击造成伤害提高的效果量从10%变更为5%<BR>追加效果从「令周围队员发动物理攻击造成的伤害提高10%」变更为「令周围队员发动攻击造成的伤害提高5%」<BR>删除「此效果每4秒降低2%」"
     },
     {
       name: "倍增",
@@ -384,7 +386,7 @@ export class RedMageComponent implements OnInit {
       distant: 0,
       range: "0",
       rangeType: "zero",
-      content: "获得50点黑魔元与50点白魔元 <BR>追加效果：恢复1次短兵相接和转移以及交剑的充能 <BR>追加效果：获得6档倍增 <BR>倍增效果：自身发动魔法攻击造成的伤害提高5% <BR>持续时间：15秒 <BR>此技能会中断连击 <BR>发动条件：自身处于战斗状态",
+      content: "获得50点黑魔元与50点白魔元<BR>追加效果：获得6档倍增<BR>倍增效果：自身发动魔法攻击造成的伤害提高5%<BR>持续时间：15秒<BR>此技能会中断连击<BR>发动条件：自身处于战斗状态",
       change: "完全重做"
     },
     {
@@ -403,7 +405,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：310 <BR>追加效果：获得2点黑魔元与2点白魔元",
-      change: "威力从290变更为310<BR>追加效果从「获得3点黑魔元与3点白魔元」变更为「获得2点黑魔元与2点白魔元」"
+      change: "威力从290变更为310<BR>黑魔元与白魔元获得量从3变更为2"
     },
     {
       name: "赤复活",
@@ -438,8 +440,8 @@ export class RedMageComponent implements OnInit {
       distant: "25",
       range: "5",
       rangeType: "circle",
-      content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：210 <BR>追加效果：获得3点黑魔元与3点白魔元",
-      change: "威力从220变更为210"
+      content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：210<BR>促进状态时威力：260<BR>追加效果：获得3点黑魔元与3点白魔元",
+      change: "威力从220变更为210<BR>新增「促进状态时威力：260」"
     },
     {
       name: "赤核爆",
@@ -516,7 +518,7 @@ export class RedMageComponent implements OnInit {
     {
       name: "Verthunder III<BR>赤暴雷",
       ndes: "",
-      pic: "../../assets/RDM/赤暴雷.jpg",
+      pic: "../../assets/RDM/赤暴雷.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
@@ -534,7 +536,7 @@ export class RedMageComponent implements OnInit {
     {
       name: "Veraero III<BR>赤暴风",
       ndes: "",
-      pic: "../../assets/RDM/赤暴风.jpg",
+      pic: "../../assets/RDM/赤暴风.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
@@ -552,7 +554,7 @@ export class RedMageComponent implements OnInit {
     {
       name: "Magick Barrier<BR>魔法屏障",
       ndes: "",
-      pic: "../../assets/RDM/魔法屏障.jpg",
+      pic: "../../assets/RDM/魔法屏障.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
@@ -570,7 +572,7 @@ export class RedMageComponent implements OnInit {
     {
       name: "Resolution<BR>决心",
       ndes: "",
-      pic: "../../assets/RDM/决心.jpg",
+      pic: "../../assets/RDM/决心.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
@@ -601,7 +603,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：220 <BR>发动条件：黑魔元、白魔元各20点 <BR>追加效果：附加1档魔元结晶<BR><BR>※该技能无法设置到热键栏",
-      change: "发动条件从「黑魔元、白魔元各30点」变更为「黑魔元、白魔元各20点」<BR>新增追加效果：附加1档魔元结晶"
+      change: "发动条件从「黑魔元、白魔元各30点」变更为「黑魔元、白魔元各20点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
       name: "魔交击斩",
@@ -619,7 +621,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：100 <BR>连击条件：回刺或魔回刺　连击中威力：290 <BR>发动条件：黑魔元、白魔元各15点 <BR>追加效果：附加1档魔元结晶<BR><BR>※该技能无法设置到热键栏",
-      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增追加效果：附加1档魔元结晶"
+      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
       name: "魔连攻",
@@ -637,7 +639,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：100 <BR>连击条件：魔交击斩 <BR>连击中威力：470 <BR>发动条件：黑魔元、白魔元各15点 <BR>追加效果：附加1档魔元结晶<BR> <BR>※该技能无法设置到热键栏",
-      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增追加效果：附加1档魔元结晶"
+      change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
       name: "魔划圆斩",
@@ -655,7 +657,7 @@ export class RedMageComponent implements OnInit {
       range: "8",
       rangeType: "sector",
       content: "向目标所在方向发出扇形范围魔法攻击　威力：130 <BR>发动条件：黑魔元、白魔元各20点 <BR>追加效果：附加1档魔元结晶<BR> <BR>※该技能无法设置到热键栏",
-      change: "威力从200变更为130<BR>新增追加效果：附加1档魔元结晶"
+      change: "威力从200变更为130<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
       name: "魔续斩",
@@ -673,7 +675,7 @@ export class RedMageComponent implements OnInit {
       range: "0",
       rangeType: "zero",
       content: "对目标发动无属性魔法攻击　威力：330 <BR>发动条件：黑魔元与白魔元各5点 <BR> <BR>※该技能无法设置到热键栏",
-      change: "复唱时间从2.2秒变更为2.5秒<BR> 威力从300变更为330"
+      change: "威力从300变更为330<BR>复唱时间从2.2秒变更为2.5秒"
     }
   ];
 
@@ -779,7 +781,7 @@ export class RedMageComponent implements OnInit {
         distant: "0",
         range: "0",
         rangeType: "zero",
-        content: "持续恢复自身魔力<BR>效果量：50　持续时间：21秒",
+        content: "持续恢复自身魔力<BR>效果量：55　持续时间：21秒",
         change: ""
     },
     {
@@ -855,8 +857,8 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv62",
-      content: "摇荡变为震荡<BR>将赤闪雷和赤疾风的威力提高到360,将赤火炎和赤飞石的威力提高到300。",
-      change: "赤闪雷和赤疾风的威力提高从370变更为360,赤火炎和赤飞石的威力提升从310变更为300。"
+      content: "摇荡变为震荡<BR>将赤闪雷和赤疾风的威力提高到360，将赤火炎和赤飞石的威力提高到300。",
+      change: "赤闪雷和赤疾风的威力提高从370变更为360，赤火炎和赤飞石的威力提升从310变更为300。"
     },
     {
       name: "散碎精通",
@@ -877,7 +879,7 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv68",
-      content: "对自身附加1档魔元结晶。<BR>最大档数：3档<BR>在魔元结晶累积到3档魔元结晶时，赤闪雷和赤震雷会变为赤核爆，赤疾风和赤烈风会变为赤神圣。<BR>发动条件：魔回刺、魔交击斩、魔连攻、魔划圆斩成功时",
+      content: "对自身附加1档魔元结晶。<BR>最大档数：3档<BR>在魔元结晶累积到3档魔元结晶时，赤闪雷和赤震雷会变为赤核爆<BR>当习得赤神圣后，赤疾风和赤烈风也会变为赤神圣<BR>发动条件：魔回刺、魔交击斩、魔连攻、魔划圆斩成功时",
       change: "新增特性"
     },
     {
@@ -888,19 +890,19 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv72",
-      content: "转移和交剑的威力提高到150",
-      change: "转移和交剑的威力提高从200变更为150"
+      content: "转移和交剑的威力提高到180",
+      change: "新增交剑的效果<BR>威力提高从200变更为180"
     },
     {
-      name: "六分反击效果提高",
+      name: "赤魔法精通",
       ndes: "",
-      pic: "../../assets/RDM/六分反击效果提高.png",
+      pic: "../../assets/RDM/赤魔法精通.png",
       tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png",
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv74",
       content: "六分反击的复唱时间缩短到35秒<BR>并将赤震雷与赤烈风的威力提高到120",
-      change: "特性名称从「六分反击效果提高」变更为「赤魔法精通」<BR>习得条件从Lv78变更为Lv74"
+      change: "习得等级从78变更为74<BR>特性名称从「六分反击效果提高」变更为「赤魔法精通」"
     },
     {
       name: "倍增效果提高",
@@ -911,7 +913,7 @@ export class RedMageComponent implements OnInit {
       ticon: "",
       lvl: "Lv78",
       content: "倍增的复唱时间缩短到110秒<BR>并附加自身造成的魔法伤害提高5%的效果",
-      change: "习得条件从Lv74变更为Lv78"
+      change: "习得等级从74变更为78"
     },
     {
       name: "赤魔法精通II",
@@ -921,7 +923,7 @@ export class RedMageComponent implements OnInit {
       tname: "赤魔法师",
       ticon: "",
       lvl: "Lv82",
-      content: "赤闪雷变为赤暴雷,赤疾风变为赤暴风 <BR>在魔元结晶累积到3档魔元结晶时，赤暴雷会变为赤核爆，赤暴风会变为赤神圣",
+      content: "赤闪雷变为赤暴雷，赤疾风变为赤暴风 <BR>在魔元结晶累积到3档魔元结晶时，赤暴雷会变为赤核爆，赤暴风会变为赤神圣",
       change: "新增特性"
     },
     {

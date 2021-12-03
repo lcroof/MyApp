@@ -24,12 +24,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "1.5秒",
          recast: "2.5秒",
-         cost: "魔力200",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
-         content: "对目标发动无属性魔法攻击　威力：160",
-         change: "咏唱时间改为1.5秒"
+         content: "对目标发动无属性魔法攻击　威力：240",
+         change: "威力从180变更为240<BR>咏唱时间从2.5秒变更为1.5秒<BR>消耗魔力从200变更为300"
       },
       {
          isDisabled: "false",
@@ -48,7 +48,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "召唤有辅助能力的宝石兽同行",
-         change: "召唤兽不再有自动攻击和攻击技能<BR>仅作为使用特定技能的条件存在"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -67,7 +67,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "令宝石兽发动守护之光<BR>对召唤该召唤兽的召唤师附加能够抵御一定伤害的防护罩<BR>该防护罩能够抵消相当于目标最大体力20%的伤害量<BR>持续时间：30秒<BR>积蓄次数：2<BR>发动条件：宝石兽处于同行状态<BR>该能力有单独计算的复唱时间",
-         change: "新自保技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -124,7 +124,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对自身附加以太充能状态<BR>持续时间：15秒<BR>以太充能效果：自身发动的毁灭、毁坏威力增加50，迸裂威力增加20<BR>追加效果：对自身附加红宝石奥秘、绿宝石奥秘、黄宝石奥秘状态<BR>发动条件：自身处于战斗状态且宝石兽处于同行状态",
-         change: "新技能<BR>龙神附体（龙神召唤）下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -138,12 +138,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「红宝石奥秘」",
+         cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤红宝石兽，令其发动红宝石之辉<BR>冲向目标并发动火属性魔法攻击  威力：400<BR>追加效果：2档火属性以太<BR>持续时间：30秒<BR>火属性以太效果：宝石之光和宝石之耀变为火属性魔法<BR>发动条件：红宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了土属性以太或风属性以太时使用",
-         change: "火神召唤下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -162,7 +162,45 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "根据自身以太效果发动对应技能<BR>火属性以太时效果：变为火属性单体攻击魔法<BR>土属性以太时效果：变为土属性单体攻击魔法<BR>风属性以太时效果：变为风属性单体攻击魔法",
-         change: "三神状态下消耗以太的单体技能"
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Ruby Ruin<BR>红宝石毁灭",
+         ndes: "",
+         pic: "../../assets/SMN/毁灭.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv6",
+         classification: "魔法",
+         cast: "2.8秒",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动火属性魔法攻击　威力：300<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "溃烂爆发",
+         ndes: "",
+         pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Summoner/Action_09.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv10",
+         classification: "能力",
+         cast: "即时",
+         recast: "1秒",
+         cost: "",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动无属性魔法攻击  威力：300<BR>发动条件：以太超流",
+         change: "习得等级从18变更为10<BR>效果更新<BR>复唱时间从5秒变更为1秒"
       },
       {
          isDisabled: "false",
@@ -181,26 +219,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对目标发动无属性魔法攻击　威力：200<BR>追加效果：2档以太超流<BR>追加效果：毁绝预备<BR>持续时间：60秒<BR>与能量抽取共享复唱时间",
-         change: "威力上调、cd调整为60秒，获取1层毁绝"
-      },
-      {
-         isDisabled: "false",
-         name: "溃烂爆发",
-         ndes: "",
-         pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Summoner/Action_09.png",
-         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
-         tname: "秘术师",
-         ticon: "",
-         lvl: "Lv10",
-         classification: "能力",
-         cast: "即时",
-         recast: "3秒",
-         cost: "「以太超流」1",
-         distant: "25",
-         range: "0",
-         rangeType: "zero",
-         content: "对目标发动无属性魔法攻击  威力：300<BR>发动条件：以太超流",
-         change: "由于DOT的删除，改为固定300威力能力技"
+         change: "习得等级从18变更为10<BR>威力从100变更为200<BR>新增「追加效果：毁绝预备 持续时间：60秒」复唱时间从30秒变更为60秒"
       },
       {
          isDisabled: "false",
@@ -233,12 +252,31 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「黄宝石奥秘」",
+         cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤黄宝石兽，令其发动黄宝石之辉<BR>冲向目标并发动土属性魔法攻击  威力：400<BR>追加效果：4档土属性以太<BR>持续时间：30秒<BR>土属性以太效果：宝石之光和宝石之耀变为土属性魔法<BR>发动条件：黄宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或风属性以太时使用",
-         change: "土神召唤下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Topaz Ruin<BR>黄宝石毁灭",
+         ndes: "",
+         pic: "../../assets/SMN/毁灭.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv15",
+         classification: "魔法",
+         cast: "即时",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动土属性魔法攻击　威力：240<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -252,31 +290,50 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「绿宝石奥秘」",
+         cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤绿宝石兽，令其发动绿宝石之辉<BR>冲向目标并发动风属性魔法攻击  威力：400<BR>追加效果：4档风属性以太<BR>持续时间：30秒<BR>风属性以太效果：宝石之光和宝石之耀变为风属性魔法<BR>发动条件：绿宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或土属性以太时使用",
-         change: "风神召唤下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Emerald Ruin<BR>绿宝石毁灭",
+         ndes: "",
+         pic: "../../assets/SMN/毁灭.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv22",
+         classification: "魔法",
+         cast: "即时",
+         recast: "1.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动风属性魔法攻击　威力：160<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
          name: "迸裂",
-         ndes: "通过特职任务获得",
+         ndes: "",
          pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Summoner/Action_16.png",
          tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
          tname: "秘术师",
          ticon: "",
          lvl: "Lv26",
          classification: "魔法",
-         cast: "2.5秒",
+         cast: "1.5秒",
          recast: "2.5秒",
          cost: "魔力300",
          distant: "25",
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：100",
-         change: "威力上调，习得条件的等级更变"
+         change: "习得职业变更为秘术师<BR>习得等级从40变更为26<BR>威力从90变更为100<BR>咏唱时间从2.5秒变更为1.5秒<BR>消耗魔力从400变更为300"
       },
       {
          isDisabled: "false",
@@ -295,7 +352,64 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "根据自身以太效果发动对应技能<BR>火属性以太时效果：变为火属性范围攻击魔法<BR>土属性以太时效果：变为土属性范围攻击魔法<BR>风属性以太时效果：变为风属性范围攻击魔法",
-         change: "三神状态下消耗以太的AOE技能"
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Ruby Outburst<BR>红宝石迸裂",
+         ndes: "",
+         pic: "../../assets/SMN/迸裂.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv26",
+         classification: "魔法",
+         cast: "2.8秒",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "5",
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动火属性范围魔法攻击　威力：140<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Topaz Outburst<BR>黄宝石迸裂",
+         ndes: "",
+         pic: "../../assets/SMN/迸裂.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv26",
+         classification: "魔法",
+         cast: "即时",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "5",
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动土属性范围魔法攻击　威力：110<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Emerald Outburst<BR>绿宝石迸裂",
+         ndes: "",
+         pic: "../../assets/SMN/迸裂.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv26",
+         classification: "魔法",
+         cast: "即时",
+         recast: "1.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "5",
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动风属性范围魔法攻击　威力：70<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -309,12 +423,69 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "1.5秒",
          recast: "2.5秒",
-         cost: "魔力200",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "对目标发动无属性魔法攻击　威力：270",
-         change: "改为毁灭的上位替换"
+         change: "习得等级从38变更为30<BR>威力从160变更为270<BR>咏唱时间从即时变更为1.5秒<BR>消耗魔力从400变更为300"
+      },
+      {
+         isDisabled: "false",
+         name: "Ruby Ruin II<BR>红宝石毁坏",
+         ndes: "",
+         pic: "../../assets/SMN/毁坏.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv30",
+         classification: "魔法",
+         cast: "2.8秒",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动火属性魔法攻击　威力：340<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Topaz Ruin II<BR>黄宝石毁坏",
+         ndes: "",
+         pic: "../../assets/SMN/毁坏.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv30",
+         classification: "魔法",
+         cast: "即时",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动土属性魔法攻击　威力：270<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Emerald Ruin II<BR>绿宝石毁坏",
+         ndes: "",
+         pic: "../../assets/SMN/毁坏.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv30",
+         classification: "魔法",
+         cast: "即时",
+         recast: "1.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动风属性魔法攻击　威力：170<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -328,12 +499,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「红宝石奥秘」",
+         cost: "",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤火神伊芙利特，令其发动地狱之火炎<BR>冲向目标并向其所在方向发动火属性扇形魔法攻击  威力：600<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：2档火属性以太<BR>持续时间：30秒<BR>火属性以太效果：宝石之光和宝石之耀变为火属性魔法<BR>追加效果：深红旋风预备<BR>持续时间：永久<BR>深红旋风预备状态在发动其他属性召唤技能时结束<BR>发动条件：红宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了土属性以太或风属性以太时使用",
-         change: "火神召唤II下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -347,12 +518,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「黄宝石奥秘」",
+         cost: "",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤土神泰坦，令其发动大地之怒<BR>冲向目标并对目标周围敌人发动土属性范围魔法攻击  威力：600<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：4档土属性以太<BR>持续时间：30秒<BR>土属性以太效果：宝石之光和宝石之耀变为土属性魔法<BR>发动条件：黄宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或风属性以太时使用",
-         change: "土神召唤II下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -366,12 +537,12 @@ export class SummonerComponent implements OnInit {
          classification: "能力",
          cast: "即时",
          recast: "3秒",
-         cost: "「以太超流」1",
+         cost: "",
          distant: "25",
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：150<BR>发动条件：以太超流",
-         change: ""
+         change: "习得等级从52变更为40<BR>威力从130变更为150<BR>复唱时间从5秒变更为1秒"
       },
       {
          isDisabled: "false",
@@ -385,12 +556,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「绿宝石奥秘」",
+         cost: "",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "召唤风神迦楼罗，令其发动大气爆发<BR>对目标及其周围敌人发动风属性范围魔法攻击  威力：600<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：4档风属性以太<BR>持续时间：30秒<BR>风属性以太效果：宝石之光和宝石之耀变为风属性魔法<BR>追加效果：螺旋气流预备<BR>持续时间：永久<BR>螺旋气流预备状态在发动其他属性召唤技能时结束<BR>发动条件：绿宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或土属性以太时使用",
-         change: "风神召唤II下位技能，用以完善召唤低等级循环"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -409,7 +580,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：100<BR>追加效果：2档以太超流<BR>追加效果：毁绝预备<BR>持续时间：60秒<BR>与能量吸收共享复唱时间",
-         change: "AOE版能量吸收"
+         change: "习得等级从35变更为52<BR>威力从40变更为100<BR>新增「追加效果：毁绝预备 续时间：60秒」<BR>复唱时间从30秒变更为60秒"
       },
       {
          isDisabled: "false",
@@ -428,7 +599,64 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对目标发动无属性魔法攻击　威力：310",
-         change: "威力上调，咏唱时间改为1.5秒"
+         change: "威力从200变更为310<BR>咏唱时间从2.5秒变更为1.5秒<BR>消耗魔力从200变更为300"
+      },
+      {
+         isDisabled: "false",
+         name: "Ruby Ruin III<BR>红宝石毁荡",
+         ndes: "",
+         pic: "../../assets/SMN/毁荡.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv54",
+         classification: "魔法",
+         cast: "2.8秒",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动火属性魔法攻击　威力：360<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Topaz Ruin III<BR>黄宝石毁荡",
+         ndes: "",
+         pic: "../../assets/SMN/毁荡.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv54",
+         classification: "魔法",
+         cast: "即时",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动土属性魔法攻击　威力：300<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Emerald Ruin III<BR>绿宝石毁荡",
+         ndes: "",
+         pic: "../../assets/SMN/毁荡.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
+         tname: "秘术师",
+         ticon: "",
+         lvl: "Lv54",
+         classification: "魔法",
+         cast: "即时",
+         recast: "1.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "zero",
+         content: "对目标发动风属性魔法攻击　威力：180<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -447,7 +675,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "进入龙神附体状态<BR>持续时间：15秒<BR>追加效果：毁荡和三重灾祸会分别变为星极脉冲和星极核爆<BR>追加效果：对自身附加红宝石奥秘、绿宝石奥秘、黄宝石奥秘状态<BR>发动条件：自身处于战斗状态且宝石兽处于同行状态",
-         change: "重做为以太充能上位技能，龙神召唤的下位技能。<BR>与龙神召唤类似于目前72级不死鸟附体与80级不死鸟召唤的关系<BR>技能说明持续时间为20秒，但实机演示以及技能循环推测应为15秒"
+         change: "种类从「能力」变更为「魔法」<BR>效果更新<BR>复唱时间从55秒变更为60秒"
       },
       {
          isDisabled: "false",
@@ -466,7 +694,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对目标发动无属性魔法攻击　威力：430<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "龙神附体下替换毁荡的瞬发高伤单体技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -485,7 +713,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围的敌人发动无属性范围魔法攻击　威力：180<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "龙神附体下替换三重灾祸的瞬发高伤AOE技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -504,7 +732,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "根据自身以太和附体发动对应技能<BR>龙神附体状态下：变为死星核爆<BR>不死鸟附体状态下：变为再生之炎<BR>深红旋风预备状态下：变为深红旋风<BR>山崩预备状态下：变为山崩<BR>螺旋气流预备状态下：变为螺旋气流",
-         change: "新技能，在不同召唤时替换为不同的技能，用于整合按键"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -522,8 +750,8 @@ export class SummonerComponent implements OnInit {
          distant: "25",
          range: "5",
          rangeType: "circle",
-         content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：400<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在龙神附体期间的替换技能，发动后不再取消龙神附体状态"
+         content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：500<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
+         change: "威力从400变更为500<BR>攻击复数敌人时，对目标之外的敌人威力降低从50%变更为60%<BR>删除「发动后会取消龙神附体状态」<BR>新增「※该技能无法设置到热键栏」"
       },
       {
          isDisabled: "false",
@@ -542,7 +770,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围敌人发动无属性魔法攻击　威力：400<BR>攻击复数敌人是，对目标之外的敌人威力降低60%<BR>发动条件：毁坏强化状态中<BR>※该技能无法设置到热键栏",
-         change: "重做为AOE技能。<BR>获取方式改为由能量吸收获取，1分钟共计获取1个"
+         change: "效果更新<BR>消耗魔力从200变更为400<BR>范围从0米变更为5米"
       },
       {
          isDisabled: "false",
@@ -561,7 +789,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "命令宝石兽发动炽热之光<BR>炽热之光效果：使宝石兽周围的队员攻击造成的伤害提高3%<BR>持续时间：30秒<BR>发动条件：宝石兽处于同行状态",
-         change: "新版灵护"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -580,7 +808,7 @@ export class SummonerComponent implements OnInit {
          range: "15",
          rangeType: "circle",
          content: "使宝石兽周围的队员攻击造成的伤害提高3%<BR>持续时间：30秒<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石兽同名技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -595,11 +823,11 @@ export class SummonerComponent implements OnInit {
          cast: "即时",
          recast: "60秒",
          cost: "-",
-         distant: "0",
+         distant: "25",
          range: "0",
          rangeType: "zero",
          content: "进入龙神附体状态并令亚灵神巴哈姆特显现<BR>持续时间：15秒<BR>召唤后亚灵神巴哈姆特会发动真龙波攻击目标<BR>追加效果：毁荡变为星极脉冲，迸裂变为星极核爆<BR>追加效果：对自身附加红宝石奥秘、绿宝石奥秘、黄宝石奥秘状态<BR>亚灵神巴哈姆特显现时，之前召唤出的召唤兽会被暂时回收，并在显现时间结束后再次出现<BR>发动条件：自身处于战斗状态，且宝石兽处于同行状态",
-         change: "重做为龙神附体上位技能<BR>技能说明持续时间为20秒，但实机演示以及技能循环推测应为15秒"
+         change: "种类从「能力」变更为「魔法」<BR>效果更新<BR>复唱时间从30秒变更为60秒<BR>距离从0米变更为25米"
       },
       {
          isDisabled: "false",
@@ -618,7 +846,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对目标发动无属性魔法攻击　威力：150<BR>发动条件：亚灵神巴哈姆特显现中<BR><BR>※该技能无法设置到热键栏",
-         change: "改为全自动触发<BR>但不清楚死亡轮回是否会影响触发次数<BR>暂不可知是否还存在召唤兽系数"
+         change: ""
       },
       {
          isDisabled: "false",
@@ -631,13 +859,13 @@ export class SummonerComponent implements OnInit {
          lvl: "Lv70",
          classification: "能力",
          cast: "即时",
-         recast: "8秒",
+         recast: "20秒",
          cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "命令显现的亚灵神巴哈姆特发动死亡轮回<BR>发动条件：亚灵神巴哈姆特显现中<BR>与不死鸟迸发共享复唱时间",
-         change: "CD修改为8秒，使在15秒巴哈期间可以使用两次"
+         change: "威力从650变更为1300<BR>攻击复数敌人时，对目标之外的敌人威力降低从50%变更为60%<BR>删除「与不死鸟迸发共享复唱时间」<BR>复唱时间从10秒变更为20秒"
       },
       {
          isDisabled: "false",
@@ -655,8 +883,8 @@ export class SummonerComponent implements OnInit {
          distant: "100",
          range: "5",
          rangeType: "circle",
-         content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：650<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：亚灵神巴哈姆特显现中<BR><BR>※该技能无法设置到热键栏",
-         change: "暂不可知是否还存在召唤兽系数"
+         content: "对目标及其周围敌人发动无属性范围魔法攻击　威力：1300<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：亚灵神巴哈姆特显现中<BR><BR>※该技能无法设置到热键栏",
+         change: "威力从650变更为1300<BR>攻击复数敌人时，对目标之外的敌人威力降低从50%变更为60%"
       },
       {
          isDisabled: "false",
@@ -670,12 +898,12 @@ export class SummonerComponent implements OnInit {
          classification: "能力",
          cast: "2.8秒",
          recast: "2.5秒",
-         cost: "「火属性以太」 1",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "对目标发动火属性魔法攻击　威力：430<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之光火属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -689,12 +917,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「土属性以太」 1",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "对目标发动土属性魔法攻击　威力：330<BR>追加效果：山崩预备<BR>持续时间：永久<BR>山崩预备状态在使用其他属性召唤技能时结束<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之光耀属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -708,12 +936,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "1.5秒",
-         cost: "「风属性以太」 1",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "对目标发动风属性魔法攻击　威力：230<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之光风属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -732,26 +960,64 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围敌人发动无属性魔法攻击　威力：120",
-         change: "迸裂上位技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
-         name: "不死鸟召唤",
+         name: "Ruby Outburst<BR>红宝石三重灾祸",
          ndes: "",
-         pic: "../../assets/SMN/不死鸟召唤.png",
+         pic: "../../assets/SMN/三重灾祸.png",
          tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
          tname: "召唤师",
          ticon: "",
-         lvl: "Lv80",
+         lvl: "Lv74",
+         classification: "魔法",
+         cast: "2.8秒",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动火属性范围魔法攻击　威力：170<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Topaz Outburst<BR>黄宝石三重灾祸",
+         ndes: "",
+         pic: "../../assets/SMN/三重灾祸.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv74",
          classification: "魔法",
          cast: "即时",
-         recast: "60秒",
-         cost: "-",
-         distant: "0",
+         recast: "2.5秒",
+         cost: "魔力300",
+         distant: "25",
          range: "0",
-         rangeType: "zero",
-         content: "进入不死鸟附体状态并令亚灵神不死鸟显现<BR>持续时间：15秒<BR>亚灵神不死鸟显现时发动不死鸟之翼<BR>另外，召唤后亚灵神不死鸟会发动赤炎攻击目标<BR>追加效果：毁荡变为灵泉之炎，三重灾祸变为炼狱之炎<BR>追加效果：对自身附加红宝石奥秘、绿宝石奥秘、黄宝石奥秘状态<BR>发动条件：自身处于战斗状态，且宝石兽处于同行状态<BR>亚灵神不死鸟显现时，之前召唤出的宝石兽会被暂时回收，并在显现时间结束后再次出现<BR><BR>※该技能无法设置到热键栏",
-         change: "重做，不死鸟期间不再需要交替使用灵泉之炎与炼狱之炎，仅区分单体与AOE<BR>技能说明持续时间为20秒，但实机演示以及技能循环推测应为15秒"
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动土属性范围魔法攻击　威力：130<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
+      },
+      {
+         isDisabled: "false",
+         name: "Emerald Outburst<BR>绿宝石三重灾祸",
+         ndes: "",
+         pic: "../../assets/SMN/三重灾祸.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv74",
+         classification: "魔法",
+         cast: "即时",
+         recast: "1.5秒",
+         cost: "魔力300",
+         distant: "25",
+         range: "0",
+         rangeType: "circle",
+         content: "对目标及其周围敌人发动风属性范围魔法攻击　威力：90<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -765,12 +1031,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "魔力200",
+         cost: "魔力300",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "对目标发动火属性魔法攻击　威力：430<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "重做为单独的单体技能，不再为连击"
+         change: "习得等级从72变更为80<BR>威力从250变更为430<BR>删除「追加效果：灵泉 持续时间：10秒」<BR>消耗魔力从400变更为300"
       },
       {
          isDisabled: "false",
@@ -789,26 +1055,26 @@ export class SummonerComponent implements OnInit {
          range: "8",
          rangeType: "circle",
          content: "对目标及其周围敌人发动火属性魔法攻击　威力：180<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "重做为单独的AOE技能，不再为连击"
+         change: "习得等级从72变更为80<BR>威力从350变更为180<BR>删除「攻击复数敌人时，对目标之外的敌人威力降低50%」<BR>删除「发动条件：灵泉状态中」<BR>新增消耗魔力"
       },
       {
          isDisabled: "false",
-         name: "Rekindle<BR>再生之炎",
+         name: "不死鸟召唤",
          ndes: "",
-         pic: "../../assets/SMN/再生之炎.png",
+         pic: "../../assets/SMN/不死鸟召唤.png",
          tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
          tname: "召唤师",
          ticon: "",
          lvl: "Lv80",
-         classification: "能力",
+         classification: "魔法",
          cast: "即时",
-         recast: "20秒",
+         recast: "60秒",
          cost: "-",
-         distant: "30",
+         distant: "0",
          range: "0",
          rangeType: "zero",
-         content: "持续恢复周围队员的体力<BR>恢复力：100　持续时间：21秒<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在不死鸟附体期间的替换技能，学习不死鸟召唤后习得"
+         content: "进入不死鸟附体状态并令亚灵神不死鸟显现<BR>持续时间：15秒<BR>亚灵神不死鸟显现时发动不死鸟之翼<BR>另外，召唤后亚灵神不死鸟会发动赤炎攻击目标<BR>追加效果：毁荡变为灵泉之炎，三重灾祸变为炼狱之炎<BR>追加效果：对自身附加红宝石奥秘、绿宝石奥秘、黄宝石奥秘状态<BR>发动条件：自身处于战斗状态，且宝石兽处于同行状态<BR>亚灵神不死鸟显现时，之前召唤出的宝石兽会被暂时回收，并在显现时间结束后再次出现<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -827,7 +1093,26 @@ export class SummonerComponent implements OnInit {
          range: "15",
          rangeType: "circle",
          content: "持续恢复周围队员的体力<BR>恢复力：100　持续时间：21秒<BR><BR>※该技能无法设置到热键栏",
-         change: "暂不可知是否还存在召唤兽系数"
+         change: ""
+      },
+      {
+         isDisabled: "false",
+         name: "Rekindle<BR>再生之炎",
+         ndes: "",
+         pic: "../../assets/SMN/再生之炎.png",
+         tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png",
+         tname: "召唤师",
+         ticon: "",
+         lvl: "Lv80",
+         classification: "能力",
+         cast: "即时",
+         recast: "20秒",
+         cost: "-",
+         distant: "30",
+         range: "0",
+         rangeType: "zero",
+         content: "恢复自己或目标队员的体力<BR>恢复力：400<BR>附加效果：赋予目标再生之炎 持续时间：30秒<BR>再生之炎效果：当生命值低于75%或效果持续时间结束时持续恢复目标体力<BR>恢复力：200 持续时间：15秒<BR>发动条件：处于不死鸟附体状态中<BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -846,7 +1131,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "对目标发动火属性魔法攻击　威力：150<BR>发动条件：亚灵神不死鸟显现中<BR><BR>※该技能无法设置到热键栏",
-         change: "改为全自动触发,但不清楚天启是否会影响触发次数,暂不可知是否还存在召唤兽系数"
+         change: ""
       },
       {
          isDisabled: "false",
@@ -859,13 +1144,13 @@ export class SummonerComponent implements OnInit {
          lvl: "Lv80",
          classification: "能力",
          cast: "即时",
-         recast: "8秒",
+         recast: "20秒",
          cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
          content: "命令显现的亚灵神不死鸟发动天启<BR>发动条件：亚灵神不死鸟显现中<BR>满足发动条件后，龙神迸发变为不死鸟迸发<BR>与龙神迸发共享复唱时间<BR><BR>※该技能无法设置到热键栏",
-         change: "CD修改为8秒，使在15秒不死鸟期间可以使用两次"
+         change: "威力从650变更为1300<BR>攻击复数敌人时，对目标之外的敌人威力降低从50%变更为60%<BR>删除「与龙神迸发共享复唱时间」<BR>复唱时间从10秒变更为20秒"
       },
       {
          isDisabled: "false",
@@ -883,8 +1168,8 @@ export class SummonerComponent implements OnInit {
          distant: "100",
          range: "5",
          rangeType: "circle",
-         content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：650<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：亚灵神不死鸟显现中<BR><BR>※该技能无法设置到热键栏",
-         change: "暂不可知是否还存在召唤兽系数"
+         content: "对目标及其周围的敌人发动火属性范围魔法攻击　威力：1300<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>发动条件：亚灵神不死鸟显现中<BR><BR>※该技能无法设置到热键栏",
+         change: "威力从650变更为1300<BR>攻击复数敌人时，对目标之外的敌人威力降低从50%变更为60%"
       },
       {
          isDisabled: "false",
@@ -895,15 +1180,15 @@ export class SummonerComponent implements OnInit {
          tname: "召唤师",
          ticon: "",
          lvl: "Lv82",
-         classification: "能力",
+         classification: "魔法",
          cast: "2.8秒",
          recast: "2.5秒",
-         cost: "「火属性以太」 1",
+         cost: "魔力300",
          distant: "25",
-         range: "0",
-         rangeType: "zero",
+         range: "5",
+         rangeType: "circle",
          content: "对目标及其周围敌人发动火属性范围魔法攻击　威力：180<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之耀火属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -917,12 +1202,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "2.5秒",
-         cost: "「土属性以太」 1",
+         cost: "魔力300",
          distant: "25",
-         range: "0",
-         rangeType: "zero",
+         range: "5",
+         rangeType: "circle",
          content: "对目标及其周围敌人发动土属性范围魔法攻击　威力：140<BR>追加效果：山崩预备<BR>持续时间：永久<BR>山崩预备状态在使用其他属性召唤技能时结束<BR>发动条件：土属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之耀土属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -936,12 +1221,12 @@ export class SummonerComponent implements OnInit {
          classification: "魔法",
          cast: "即时",
          recast: "1.5秒",
-         cost: "「风属性以太」 1",
+         cost: "魔力300",
          distant: "25",
-         range: "0",
-         rangeType: "zero",
+         range: "5",
+         rangeType: "circle",
          content: "对目标及其周围敌人发动风属性范围魔法攻击　威力：100<BR>发动条件：风属性以太<BR><BR>※该技能无法设置到热键栏",
-         change: "宝石之耀风属性以太下衍生技"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -960,7 +1245,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "冲向目标并对目标及其周围敌人造成火属性范围魔法攻击  威力：430<BR>攻击复数目标时，对目标之外的敌人威力降低65%<BR>发动条件：深红旋风预备状态中<BR>止步状态下无法发动<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在深红旋风预备状态下的替换技能，带有突进效果，与深红强袭为2连击"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -979,7 +1264,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围敌人造成火属性范围魔法攻击　威力：430<BR>攻击复数敌人时，对目标之外的敌人威力降低65%<BR>连击条件：深红旋风<BR><BR>※该技能无法设置到热键栏",
-         change: "近战第二连"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -998,7 +1283,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "对目标及其周围敌人造成土属性范围魔法攻击  威力：150<BR>攻击复数目标时，对目标之外的敌人威力降低70%<BR>发动条件：山崩预备状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在山崩预备状态下的替换技能"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -1010,14 +1295,14 @@ export class SummonerComponent implements OnInit {
          ticon: "",
          lvl: "Lv86",
          classification: "魔法",
-         cast: "即时",
-         recast: "3秒",
-         cost: "3.5秒",
+         cast: "3秒",
+         recast: "3.5秒",
+         cost: "-",
          distant: "25",
          range: "0",
          rangeType: "zero",
-         content: "对目标及其周围敌人造成风属性范围魔法攻击  威力：430<BR>攻击复数目标时，对目标之外的敌人威力降低65%<BR>追加效果：以目标为中心产生伤害区域<BR>威力：30　持续时间：12秒<BR>发动条件：螺旋气流预备状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "星极超流在螺旋气流预备状态下的替换技能"
+         content: "对目标及其周围敌人造成风属性范围魔法攻击  威力：430<BR>攻击复数目标时，对目标之外的敌人威力降低65%<BR>追加效果：以目标为中心产生伤害区域<BR>威力：30　持续时间：15秒<BR>发动条件：螺旋气流预备状态中<BR><BR>※该技能无法设置到热键栏",
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -1036,7 +1321,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "召唤火神伊芙利特，令其发动地狱之火炎<BR>对目标及其周围敌人造成火属性范围魔法伤害  威力：700<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：2档火属性以太<BR>火属性以太效果：宝石之光和宝石之耀变为火属性魔法<BR>持续时间：30秒<BR>追加效果：深红旋风预备<BR>持续时间：永久<BR>深红旋风可用状态在使用其他属性召唤技能时结束<BR>发动条件：红宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了土属性以太或风属性以太时使用",
-         change: "新技能，上位替换火神召唤"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -1055,7 +1340,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "召唤土神泰坦，令其发动大地之怒<BR>对目标及其周围敌人造成土属性范围魔法伤害  威力：700<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：4档土属性以太<BR>土属性以太效果：宝石之光和宝石之耀变为土属性魔法<BR>持续时间：30秒<BR>发动条件：黄宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或风属性以太时使用",
-         change: "新技能，上位替换土神召唤"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
@@ -1074,7 +1359,7 @@ export class SummonerComponent implements OnInit {
          range: "0",
          rangeType: "zero",
          content: "召唤风神迦楼罗，令其发动大气爆发<BR>对目标及其周围敌人造成风属性范围魔法伤害  威力：700<BR>攻击复数敌人时，对目标之外的敌人威力降低60%<BR>追加效果：4档风属性以太<BR>风属性以太效果：宝石之光和宝石之耀变为风属性魔法<BR>持续时间：30秒<BR>追加效果：螺旋气流预备<BR>持续时间：永久<BR>螺旋气流可用状态在使用其他属性召唤技能时结束<BR>发动条件：绿宝石奥秘，且宝石兽处于同行状态<BR>不能在自身附加了火属性以太或土属性以太时使用",
-         change: "新技能，上位替换风神召唤"
+         change: "新增技能"
       }
    ];
 
@@ -1180,7 +1465,7 @@ export class SummonerComponent implements OnInit {
          distant: "0",
          range: "0",
          rangeType: "zero",
-         content: "持续恢复自身魔力<BR>效果量：50　持续时间：21秒",
+         content: "持续恢复自身魔力<BR>效果量：55　持续时间：21秒",
          change: ""
       },
       {
@@ -1290,7 +1575,7 @@ export class SummonerComponent implements OnInit {
          range: "",
          rangeType: "zero",
          content: "毁灭变为毁坏",
-         change: "习得条件从Lv54变更为Lv30，效果从「毁灭变为毁荡」变更为「毁灭变为毁坏」"
+         change: "习得条件从Lv54变更为Lv30<BR>效果更新"
       },
       {
          isDisabled: "false",
@@ -1461,7 +1746,7 @@ export class SummonerComponent implements OnInit {
          range: "",
          rangeType: "zero",
          content: "龙神附体变为龙神召唤",
-         change: "效果从「自身附体深度加深1档 发动条件：龙神附体状态结束时」变更为「龙神附体变为龙神召唤」"
+         change: "效果更新"
       },
       {
          isDisabled: "false",
@@ -1598,9 +1883,9 @@ export class SummonerComponent implements OnInit {
       },
       {
          isDisabled: "false",
-         name: "召唤精通IV",
+         name: "内力迸发II",
          ndes: "",
-         pic: "../../assets/SMN/召唤精通IV.png",
+         pic: "../../assets/SMN/内力迸发II.png",
          tiurl: "https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/_3v-EDzckpsEC39oe0t4A8pLJk.png",
          tname: "召唤师",
          ticon: "",

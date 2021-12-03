@@ -15,7 +15,7 @@
             <div class="job__wrapper red">
                 <div class="job__content">
                     <p class="job__update">最近更新: {{ today | date:'yyyy/MM/dd' }}</p>
-                    <p class="job__notes__lv80caution">本职业指南是Erlade以MediaTour披露的内容抢鲜制作的。感谢伊芙嘉登的网页框架修改。<br />由于版本还在不断修正改善中，具体内容以实际更新后版本为准。
+                    <p class="job__notes__lv80caution">本职业指南是Erlade以国际服JobGuide的内容制作的。感谢伊芙嘉登的网页框架修改。<br />由于版本还在不断修正改善中，具体内容以实际更新后版本为准。
                     </p>
                     <div class="job__content__wrapper">
                         <h2 class="job__title">技能 &middot; 特性</h2>
@@ -238,9 +238,10 @@
                                             <div class="job_tlist">
                                                 <div class="job_titem item3_0">
                                                     <div class="skill_icon">
-                                                        <img src="{{item.pic}}" width="40" height="40" alt="" />
+                                                        <img src="{{item.pic}}" width="40" height="40" alt="" [ngStyle]="{'filter': item.isDisabled === 'true' ? 'grayscale(100%)' : ''}">
                                                     </div>
-                                                    <p class="skill_txt"><strong>{{item.name}}</strong> </p>
+                                                    <strong *ngIf="item.isDisabled === 'true'"><s class="skill_txt" [innerHTML]=[item.name]></s></strong>
+                                                    <strong *ngIf="item.isDisabled !== 'true'"><div class="skill_txt" [innerHTML]=[item.name]></div></strong>
                                                 </div>
                                                 <div class="job_titem item3_1">
                                                     <div class="waper_icon">
