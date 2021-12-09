@@ -758,7 +758,7 @@ export class BlackMageComponent implements OnInit {
             range: "",
             rangeType: "zero",
             content: "咏唱部分火属性和冰属性魔法时对自身附加星极火和灵极冰效果<BR>最大档数：1   持续时间：15秒<BR>当自身在星极火或灵极冰状态时，相反属性的魔法将不消耗魔力<BR>但不适用于核爆",
-            change: "习得条件从Lv72变更为Lv1<BR>更新效果"
+            change: "习得等级从72变更为1<BR>更新效果"
         },
         {
             isDisabled: "false",
@@ -948,7 +948,7 @@ export class BlackMageComponent implements OnInit {
             range: "",
             rangeType: "zero",
             content: "对自身附加3档灵极心状态<BR>发动条件：玄冰",
-            change: "习得条件从68级变更为58级<BR>效果从「对自身附加1档灵极心状态」变更为「对自身附加3档灵极心状态」"
+            change: "习得等级从68变更为58<BR>效果从「对自身附加1档灵极心状态」变更为「对自身附加3档灵极心状态」"
         },
         {
             isDisabled: "false",
