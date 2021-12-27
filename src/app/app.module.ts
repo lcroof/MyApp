@@ -11,6 +11,11 @@ import zh from '@angular/common/locales/zh';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragoonComponent } from './dragoon/dragoon.component';
+import { MonkComponent } from './monk/monk.component';
+import { ReaperComponent } from './reaper/reaper.component';
+import { NinjaComponent } from './ninja/ninja.component';
+import { SamuraiComponent } from './samurai/samurai.component';
 
 registerLocaleData(zh);
 
@@ -19,7 +24,12 @@ registerLocaleData(zh);
     AppComponent,
     RedMageComponent,
     SummonerComponent,
-    BlackMageComponent
+    BlackMageComponent,
+    DragoonComponent,
+    MonkComponent,
+    ReaperComponent,
+    NinjaComponent,
+    SamuraiComponent
   ],
   imports: [
     BrowserModule,

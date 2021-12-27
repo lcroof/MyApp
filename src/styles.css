@@ -934,27 +934,31 @@ td {
 }
 
 .bannerBox .job__header--monk {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/wxEAp2mOU2Ay-gw8HYPlHu5jNM.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/wxEAp2mOU2Ay-gw8HYPlHu5jNM.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--dragoon {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/TZOVRpZGk8aqzqEkUj5l3LpF_4.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/TZOVRpZGk8aqzqEkUj5l3LpF_4.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--ninja {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/z5PCF6Hc9Gqb7TefHKxdmSSZM4.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/z5PCF6Hc9Gqb7TefHKxdmSSZM4.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--samurai {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/zADePMzBSPsaZMvfM6PIWMeoME.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/zADePMzBSPsaZMvfM6PIWMeoME.jpg) no-repeat center 50%  #4f1717;
+}
+
+.bannerBox .job__header--reaper {
+    background: url(https://img.finalfantasyxiv.com/lds/promo/h/T/Qw-gmeX32gyxMnKvXkuSgsIlpY.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--bard {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/LOrM96FURBTJcKghngHIteiYOg.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/LOrM96FURBTJcKghngHIteiYOg.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--machinist {
-    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/avhH8ZzC1OUxJXv7K6CSDcuAcg.jpg) no-repeat center top #4f1717;
+    background: url(https://static.web.sdo.com/jijiamobile/pic/ff14/20170901battle/avhH8ZzC1OUxJXv7K6CSDcuAcg.jpg) no-repeat center 50%  #4f1717;
 }
 
 .bannerBox .job__header--blackmage {
