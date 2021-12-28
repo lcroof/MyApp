@@ -1410,7 +1410,7 @@ export class SummonerComponent implements OnInit {
          range: "5",
          rangeType: "circle",
          content: "令目标及其周围的敌人陷入睡眠状态<BR>持续时间：30秒<BR>发动之后会停止自动攻击",
-         change: "新增特性"
+         change: "新增技能"
       },
       {
          isDisabled: "false",
