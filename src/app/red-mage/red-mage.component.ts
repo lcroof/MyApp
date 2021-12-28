@@ -12,6 +12,7 @@ export class RedMageComponent implements OnInit {
 
   skills: any[] = [
     {
+      isDisabled: "false",
       name: "回刺",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_01.png",
@@ -30,6 +31,7 @@ export class RedMageComponent implements OnInit {
       change: "技能变为魔回刺的条件从「黑魔元与白魔元都在30点以上」变更为「黑魔元与白魔元都在20点以上」"
     },
     {
+      isDisabled: "false",
       name: "摇荡",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_02.png",
@@ -48,6 +50,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从180变更为170<BR>黑魔元与白魔元获得量从3变更为2"
     },
     {
+      isDisabled: "false",
       name: "赤闪雷",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_03.png",
@@ -66,6 +69,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从370变更为360<BR>黑魔元获得量从11变更为6"
     },
     {
+      isDisabled: "false",
       name: "短兵相接",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_04.png",
@@ -84,6 +88,7 @@ export class RedMageComponent implements OnInit {
       change: "复唱时间从40变更为35<BR>新增积蓄次数：2"
     },
     {
+      isDisabled: "false",
       name: "赤疾风",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_05.png",
@@ -102,6 +107,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从370变更为360<BR>白魔元获得量从11变更为6"
     },
     {
+      isDisabled: "false",
       name: "散碎",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_06.png",
@@ -120,6 +126,7 @@ export class RedMageComponent implements OnInit {
       change: "新增「促进状态时威力：170」"
     },
     {
+      isDisabled: "false",
       name: "赤震雷",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_07.png",
@@ -138,6 +145,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从120变更为140"
     },
     {
+      isDisabled: "false",
       name: "赤烈风",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_08.png",
@@ -156,6 +164,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从120变更为140"
     },
     {
+      isDisabled: "false",
       name: "赤火炎",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_09.png",
@@ -174,6 +183,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从310变更为330<BR>黑魔元获得量从9变更为5"
     },
     {
+      isDisabled: "false",
       name: "赤飞石",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_10.png",
@@ -192,6 +202,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从310变更为330<BR>白魔元获得量从9变更为5"
     },
     {
+      isDisabled: "false",
       name: "交击斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_11.png",
@@ -210,6 +221,7 @@ export class RedMageComponent implements OnInit {
       change: "技能变为魔交击斩的条件从「黑魔元与白魔元都在25点以上」变更为「黑魔元与白魔元都在15点以上」"
     },
     {
+      isDisabled: "false",
       name: "移转",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_12.png",
@@ -228,6 +240,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从200变更为180<BR>新增积蓄次数：2"
     },
     {
+      isDisabled: "false",
       name: "交剑",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_26.png",
@@ -246,6 +259,7 @@ export class RedMageComponent implements OnInit {
       change: "习得等级从72变更为40<BR>威力从150变更为180<BR>新增积蓄次数：2"
     },
     {
+      isDisabled: "false",
       name: "飞刺",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_13.png",
@@ -264,6 +278,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从440变更为460"
     },
     {
+      isDisabled: "false",
       name: "连攻",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_14.png",
@@ -282,6 +297,7 @@ export class RedMageComponent implements OnInit {
       change: "技能变为魔连攻的条件从「黑魔元与白魔元都在25点以上」变更为「黑魔元与白魔元都在15点以上」"
     },
     {
+      isDisabled: "false",
       name: "促进",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_15.png",
@@ -300,6 +316,7 @@ export class RedMageComponent implements OnInit {
       change: "效果更新<BR>新增积蓄次数：2"
     },
     {
+      isDisabled: "false",
       name: "划圆斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_16.png",
@@ -318,6 +335,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "赤治疗",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_17.png",
@@ -336,6 +354,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "六分反击",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_18.png",
@@ -354,6 +373,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从400变更为360"
     },
     {
+      isDisabled: "false",
       name: "鼓励",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_19.png",
@@ -372,6 +392,7 @@ export class RedMageComponent implements OnInit {
       change: "自身发动魔法攻击造成伤害提高的效果量从10%变更为5%<BR>追加效果从「令周围队员发动物理攻击造成的伤害提高10%」变更为「令周围队员发动攻击造成的伤害提高5%」<BR>删除「此效果每4秒降低2%」"
     },
     {
+      isDisabled: "false",
       name: "倍增",
       ndes: "通过特职任务获得",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_20.png",
@@ -390,6 +411,7 @@ export class RedMageComponent implements OnInit {
       change: "完全重做"
     },
     {
+      isDisabled: "false",
       name: "震荡",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_21.png",
@@ -408,6 +430,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从290变更为310<BR>黑魔元与白魔元获得量从3变更为2"
     },
     {
+      isDisabled: "false",
       name: "赤复活",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_22.png",
@@ -426,6 +449,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "冲击",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_23.png",
@@ -444,6 +468,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从220变更为210<BR>新增「促进状态时威力：260」"
     },
     {
+      isDisabled: "false",
       name: "赤核爆",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_24.png",
@@ -462,6 +487,7 @@ export class RedMageComponent implements OnInit {
       change: "完全重做"
     },
     {
+      isDisabled: "false",
       name: "赤神圣",
       ndes: "通过特职任务获得",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_25.png",
@@ -480,6 +506,7 @@ export class RedMageComponent implements OnInit {
       change: "完全重做"
     },
     {
+      isDisabled: "false",
       name: "续斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_27.png",
@@ -498,6 +525,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "焦热",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_28.png",
@@ -516,6 +544,7 @@ export class RedMageComponent implements OnInit {
       change: "完全重做"
     },
     {
+      isDisabled: "false",
       name: "Verthunder III<BR>赤暴雷",
       ndes: "",
       pic: "../../assets/RDM/赤暴雷.png",
@@ -534,6 +563,7 @@ export class RedMageComponent implements OnInit {
       change: "新增技能"
     },
     {
+      isDisabled: "false",
       name: "Veraero III<BR>赤暴风",
       ndes: "",
       pic: "../../assets/RDM/赤暴风.png",
@@ -552,6 +582,7 @@ export class RedMageComponent implements OnInit {
       change: "新增技能"
     },
     {
+      isDisabled: "false",
       name: "Magick Barrier<BR>魔法屏障",
       ndes: "",
       pic: "../../assets/RDM/魔法屏障.png",
@@ -570,6 +601,7 @@ export class RedMageComponent implements OnInit {
       change: "新增技能"
     },
     {
+      isDisabled: "false",
       name: "Resolution<BR>决心",
       ndes: "",
       pic: "../../assets/RDM/决心.png",
@@ -588,6 +620,7 @@ export class RedMageComponent implements OnInit {
       change: "新增技能"
     },
     {
+      isDisabled: "false",
       name: "魔回刺",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_29.png",
@@ -606,6 +639,7 @@ export class RedMageComponent implements OnInit {
       change: "发动条件从「黑魔元、白魔元各30点」变更为「黑魔元、白魔元各20点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
+      isDisabled: "false",
       name: "魔交击斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_30.png",
@@ -624,6 +658,7 @@ export class RedMageComponent implements OnInit {
       change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
+      isDisabled: "false",
       name: "魔连攻",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_31.png",
@@ -642,6 +677,7 @@ export class RedMageComponent implements OnInit {
       change: "发动条件从「黑魔元、白魔元各25点」变更为「黑魔元、白魔元各15点」<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
+      isDisabled: "false",
       name: "魔划圆斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_32.png",
@@ -660,6 +696,7 @@ export class RedMageComponent implements OnInit {
       change: "威力从200变更为130<BR>新增「追加效果：附加1档魔元结晶」"
     },
     {
+      isDisabled: "false",
       name: "魔续斩",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Action_33.png",
@@ -817,6 +854,7 @@ export class RedMageComponent implements OnInit {
 
   traits: any[] = [
     {
+      isDisabled: "false",
       name: "连续咏唱",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_01.png",
@@ -828,6 +866,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "技能效果提高",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_02.png",
@@ -839,6 +878,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "技能效果提高II",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_03.png",
@@ -850,6 +890,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "摇荡效果提高",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_04.png",
@@ -861,6 +902,7 @@ export class RedMageComponent implements OnInit {
       change: "赤闪雷和赤疾风的威力提高从370变更为360，赤火炎和赤飞石的威力提升从310变更为300。"
     },
     {
+      isDisabled: "false",
       name: "散碎精通",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_05.png",
@@ -872,6 +914,7 @@ export class RedMageComponent implements OnInit {
       change: ""
     },
     {
+      isDisabled: "false",
       name: "魔法剑效果提高",
       ndes: "",
       pic: "../../assets/RDM/魔法剑效果提高.png",
@@ -883,6 +926,7 @@ export class RedMageComponent implements OnInit {
       change: "新增特性"
     },
     {
+      isDisabled: "false",
       name: "移转效果提高",
       ndes: "",
       pic: "https://static.web.sdo.com/jijiamobile/pic/ff14/20190917jobguid/Red Mage/Trait_06.png",
@@ -894,6 +938,7 @@ export class RedMageComponent implements OnInit {
       change: "新增交剑的效果<BR>威力提高从200变更为180"
     },
     {
+      isDisabled: "false",
       name: "赤魔法精通",
       ndes: "",
       pic: "../../assets/RDM/赤魔法精通.png",
@@ -905,6 +950,7 @@ export class RedMageComponent implements OnInit {
       change: "习得等级从78变更为74<BR>特性名称从「六分反击效果提高」变更为「赤魔法精通」"
     },
     {
+      isDisabled: "false",
       name: "倍增效果提高",
       ndes: "",
       pic: "../../assets/RDM/倍增效果提高.png",
@@ -916,6 +962,7 @@ export class RedMageComponent implements OnInit {
       change: "习得等级从74变更为78"
     },
     {
+      isDisabled: "false",
       name: "赤魔法精通II",
       ndes: "",
       pic: "../../assets/RDM/赤魔法精通II.png",
@@ -927,6 +974,7 @@ export class RedMageComponent implements OnInit {
       change: "新增特性"
     },
     {
+      isDisabled: "false",
       name: "赤魔法精通III",
       ndes: "",
       pic: "../../assets/RDM/赤魔法精通III.png",
@@ -938,6 +986,7 @@ export class RedMageComponent implements OnInit {
       change: "新增特性"
     },
     {
+      isDisabled: "false",
       name: "促进效果提高",
       ndes: "",
       pic: "../../assets/RDM/促进效果提高.png",
@@ -949,6 +998,7 @@ export class RedMageComponent implements OnInit {
       change: "新增特性"
     },
     {
+      isDisabled: "false",
       name: "倍增效果提高II",
       ndes: "",
       pic: "../../assets/RDM/倍增效果提高II.png",
