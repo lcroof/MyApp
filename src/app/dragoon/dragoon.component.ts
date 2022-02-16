@@ -350,11 +350,11 @@ export class DragoonComponent implements OnInit {
         cast: "即时",
         recast: "120秒",
         cost: "-",
-        distant: "12",
+        distant: "30",
         range: "0",
         rangeType: "zero",
-        content: "为自身附加巨龙右眼状态<BR>当指定一名队员为目标时，为自身附加巨龙右眼状态，为目标附加巨龙左眼状态<BR>巨龙右眼效果：攻击伤害提高10%<BR>巨龙左眼效果：攻击伤害提高5%<BR>持续时间：20秒<BR>与目标的距离超过12米无法发动巨龙左眼的效果",
-        change: ""
+        content: "为自身附加巨龙右眼状态<BR>当指定一名队员为目标时，为自身附加巨龙右眼状态，为目标附加巨龙左眼状态<BR>巨龙右眼效果：攻击伤害提高10%<BR>巨龙左眼效果：攻击伤害提高5%<BR>持续时间：20秒",
+        change: "距离从12米改为30米<BR>删除「与目标的距离超过12米无法发动巨龙左眼的效果」"
     },
     {
         name: "幻象冲",
@@ -443,8 +443,8 @@ export class DragoonComponent implements OnInit {
         distant: "3",
         range: "0",
         rangeType: "zero",
-        content: "对目标发动物理攻击　威力：260<BR>追加效果：天龙眼<BR>发动条件：龙眼预备状态中<BR><BR>※该技能无法设置到热键栏",
-        change: "威力由330变更为260<br>新增「追加效果：天龙眼」<br>发动条件由「龙眼雷电预备状态中」变更为「龙眼预备状态中」"
+        content: "对目标发动物理攻击　威力：280<BR>追加效果：天龙眼<BR>发动条件：龙眼预备状态中<BR><BR>※该技能无法设置到热键栏",
+        change: "威力由330变更为280<br>新增「追加效果：天龙眼」<br>发动条件由「龙眼雷电预备状态中」变更为「龙眼预备状态中」"
     },
     {
         name: "坠星冲",
@@ -461,8 +461,8 @@ export class DragoonComponent implements OnInit {
         distant: "20",
         range: "5",
         rangeType: "circle",
-        content: "跳起接近目标并发动火属性范围物理攻击　威力：500<BR>攻击复数敌人时，对目标之外的敌人威力降低30%<BR>止步状态下无法发动<BR>发动条件：红莲龙血状态中",
-        change: "威力由600变更为500"
+        content: "跳起接近目标并发动火属性范围物理攻击　威力：620<BR>攻击复数敌人时，对目标之外的敌人威力降低30%<BR>止步状态下无法发动<BR>发动条件：红莲龙血状态中",
+        change: "威力由600变更为620"
     },
     {
         isDisabled: "false",
@@ -499,7 +499,7 @@ export class DragoonComponent implements OnInit {
         distant: "3",
         range: "0",
         rangeType: "zero",
-        content: "对目标发动物理攻击　威力：100<BR>连击条件：贯通刺　连击中威力：430<BR>连击成功：龙牙龙爪预备<BR>持续时间：30秒<BR>该效果在执行了战技时自动解除",
+        content: "对目标发动物理攻击　威力：100<BR>连击条件：贯通刺　连击中威力：480<BR>连击成功：龙牙龙爪预备<BR>持续时间：30秒<BR>该效果在执行了战技时自动解除",
         change: "新增技能"
     },
     {
@@ -518,7 +518,7 @@ export class DragoonComponent implements OnInit {
         distant: "3",
         range: "0",
         rangeType: "zero",
-        content: "对目标发动物理攻击　威力：100<BR>背面攻击威力：140<BR>连击条件：开膛枪　连击中威力：240<BR>连击中背面攻击威力：280<BR>连击成功：持续伤害<BR>威力：45　持续时间：24秒<BR>连击成功：龙尾大回旋预备<BR>持续时间：30秒<BR>该效果在执行了战技时自动解除",
+        content: "对目标发动物理攻击　威力：100<BR>背面攻击威力：140<BR>连击条件：开膛枪　连击中威力：260<BR>连击中背面攻击威力：300<BR>连击成功：持续伤害<BR>威力：45　持续时间：24秒<BR>连击成功：龙尾大回旋预备<BR>持续时间：30秒<BR>该效果在执行了战技时自动解除",
         change: "新增技能"
     },
     {

@@ -218,8 +218,8 @@ export class BlackMageComponent implements OnInit {
             distant: "25",
             range: "0",
             rangeType: "zero",
-            content: "对目标发动火属性魔法攻击　威力：240<BR>追加效果：星极火最大档数　持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态",
-            change: "习得等级从34变更为35"
+            content: "对目标发动火属性魔法攻击　威力：260<BR>追加效果：星极火最大档数　持续时间：15秒<BR>在处于灵极冰状态时会同时解除该状态",
+            change: "习得等级从34变更为35<BR>威力从240变更为260"
         },
         {
             isDisabled: "false",
@@ -237,8 +237,8 @@ export class BlackMageComponent implements OnInit {
             distant: "25",
             range: "0",
             rangeType: "zero",
-            content: "对目标发动冰属性魔法攻击　威力：240<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态",
-            change: "习得等级从40变更为35"
+            content: "对目标发动冰属性魔法攻击　威力：260<BR>追加效果：灵极冰最大档数　持续时间：15秒<BR>在处于星极火状态时会同时解除该状态",
+            change: "习得等级从40变更为35<BR>威力从240变更为260"
         },
         {
             isDisabled: "false",
@@ -370,8 +370,8 @@ export class BlackMageComponent implements OnInit {
             distant: "25",
             range: "0",
             rangeType: "zero",
-            content: "对目标发动冰属性魔法攻击　威力：300<BR>追加效果：3档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：灵极冰状态中",
-            change: "发动条件从「天语及灵极冰状态中」变更为「灵极冰状态中」<BR>咏唱时间从2.8秒变更为2.5秒"
+            content: "对目标发动冰属性魔法攻击　威力：310<BR>追加效果：3档灵极心<BR>灵极心效果：抵消星极火状态中发动火系魔法增加的魔力消耗<BR>另外，发动核爆时会消耗全部的灵极心将魔力消耗降为2/3<BR>发动条件：灵极冰状态中",
+            change: "威力从300变更为310<BR>发动条件从「天语及灵极冰状态中」变更为「灵极冰状态中」<BR>咏唱时间从2.8秒变更为2.5秒"
         },
         {
             isDisabled: "false",
@@ -389,8 +389,8 @@ export class BlackMageComponent implements OnInit {
             distant: "25",
             range: "0",
             rangeType: "zero",
-            content: "对目标发动火属性魔法攻击　威力：300<BR>发动条件：星极火状态中",
-            change: "发动条件从「天语及星极火状态中」变更为「星极火状态中」"
+            content: "对目标发动火属性魔法攻击　威力：310<BR>发动条件：星极火状态中",
+            change: "威力从300变更为310<BR>发动条件从「天语及星极火状态中」变更为「星极火状态中」"
         },
         {
             isDisabled: "false",
@@ -522,8 +522,8 @@ export class BlackMageComponent implements OnInit {
             distant: "25",
             range: "0",
             rangeType: "zero",
-            content: "对目标发动无属性魔法攻击　威力：660<BR>发动条件：通晓",
-            change: "威力从750变更为660"
+            content: "对目标发动无属性魔法攻击　威力：760<BR>发动条件：通晓",
+            change: "威力从750变更为760"
         },
         {
             isDisabled: "false",

@@ -16,6 +16,7 @@ import { MonkComponent } from './monk/monk.component';
 import { ReaperComponent } from './reaper/reaper.component';
 import { NinjaComponent } from './ninja/ninja.component';
 import { SamuraiComponent } from './samurai/samurai.component';
+import { PartyBuffComponent } from './partybuff/partybuff.component';
 
 registerLocaleData(zh);
 
@@ -29,7 +30,8 @@ registerLocaleData(zh);
     MonkComponent,
     ReaperComponent,
     NinjaComponent,
-    SamuraiComponent
+    SamuraiComponent,
+    PartyBuffComponent
   ],
   imports: [
     BrowserModule,

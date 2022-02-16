@@ -693,7 +693,7 @@ export class SummonerComponent implements OnInit {
          distant: "25",
          range: "0",
          rangeType: "zero",
-         content: "对目标发动无属性魔法攻击　威力：430<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
+         content: "对目标发动无属性魔法攻击　威力：440<BR>发动条件：龙神附体状态中<BR><BR>※该技能无法设置到热键栏",
          change: "新增技能"
       },
       {
@@ -902,7 +902,7 @@ export class SummonerComponent implements OnInit {
          distant: "25",
          range: "0",
          rangeType: "zero",
-         content: "对目标发动火属性魔法攻击　威力：430<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
+         content: "对目标发动火属性魔法攻击　威力：450<BR>发动条件：火属性以太<BR><BR>※该技能无法设置到热键栏",
          change: "新增技能"
       },
       {
@@ -1035,8 +1035,8 @@ export class SummonerComponent implements OnInit {
          distant: "25",
          range: "0",
          rangeType: "zero",
-         content: "对目标发动火属性魔法攻击　威力：430<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "习得等级从72变更为80<BR>威力从250变更为430<BR>删除「追加效果：灵泉 持续时间：10秒」<BR>消耗魔力从400变更为300"
+         content: "对目标发动火属性魔法攻击　威力：540<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
+         change: "习得等级从72变更为80<BR>威力从250变更为540<BR>删除「追加效果：灵泉 持续时间：10秒」<BR>消耗魔力从400变更为300"
       },
       {
          isDisabled: "false",
@@ -1054,8 +1054,8 @@ export class SummonerComponent implements OnInit {
          distant: "25",
          range: "8",
          rangeType: "circle",
-         content: "对目标及其周围敌人发动火属性魔法攻击　威力：180<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
-         change: "习得等级从72变更为80<BR>威力从350变更为180<BR>删除「攻击复数敌人时，对目标之外的敌人威力降低50%」<BR>删除「发动条件：灵泉状态中」<BR>新增消耗魔力"
+         content: "对目标及其周围敌人发动火属性魔法攻击　威力：240<BR>发动条件：不死鸟附体状态中<BR><BR>※该技能无法设置到热键栏",
+         change: "习得等级从72变更为80<BR>威力从350变更为240<BR>删除「攻击复数敌人时，对目标之外的敌人威力降低50%」<BR>删除「发动条件：灵泉状态中」<BR>新增消耗魔力"
       },
       {
          isDisabled: "false",
